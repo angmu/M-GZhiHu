@@ -10,4 +10,29 @@
 
 @interface MGTopStory : NSObject
 
+/**
+ *  故事id
+ */
+@property (nonatomic, assign) NSInteger storyId;
+
+/**
+ *  故事标题
+ */
+@property (nonatomic, copy) NSString *title;
+
+/**
+ *  故事图片地址
+ */
+@property (nonatomic, copy) NSString *image;
+
+/**
+ *  故事类型,貌似没用
+ */
+@property (nonatomic, assign) NSInteger type;
+
+/**
+ *  不知道有什么用
+ */
+@property (nonatomic, copy) NSString *ga_prefix;
+
 @end

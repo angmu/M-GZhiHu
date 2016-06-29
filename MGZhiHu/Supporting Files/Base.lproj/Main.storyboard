@@ -92,18 +92,32 @@
         <!--今日新闻-->
         <scene sceneID="6bz-oG-eS3">
             <objects>
-                <tableViewController id="x3r-du-3ed" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="ibv-eq-Gkh">
+                <tableViewController id="x3r-du-3ed" customClass="MGContentViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" id="ibv-eq-Gkh">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Nzc-Eh-2FF">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="contentCell" rowHeight="100" id="Nzc-Eh-2FF" customClass="MGContentCell">
+                                <rect key="frame" x="0.0" y="92" width="600" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Nzc-Eh-2FF" id="jYn-qW-Jlo">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="99"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Menu_Follow" translatesAutoresizingMaskIntoConstraints="NO" id="G7O-LD-w5y">
+                                            <rect key="frame" x="16" y="15" width="15" height="18"/>
+                                        </imageView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Menu_Follow" translatesAutoresizingMaskIntoConstraints="NO" id="jgb-HQ-Ehh">
+                                            <rect key="frame" x="26" y="25" width="15" height="18"/>
+                                        </imageView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Menu_Follow" translatesAutoresizingMaskIntoConstraints="NO" id="ofh-hd-wy7">
+                                            <rect key="frame" x="36" y="35" width="15" height="18"/>
+                                        </imageView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Menu_Follow" translatesAutoresizingMaskIntoConstraints="NO" id="aZk-rB-WsL">
+                                            <rect key="frame" x="46" y="45" width="15" height="18"/>
+                                        </imageView>
+                                    </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -119,4 +133,7 @@
             <point key="canvasLocation" x="1833" y="429"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Menu_Follow" width="15" height="18"/>
+    </resources>
 </document>

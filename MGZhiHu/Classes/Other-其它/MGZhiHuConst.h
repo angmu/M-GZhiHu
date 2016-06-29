@@ -20,11 +20,20 @@ static CGFloat const MGTitleMargin = 20;
 /** ID */
 static NSString *const ID = @"MGPageViewCell";
 
+/** 循环滚动图片高度 */
+static CGFloat const MGScrollImageH = 154;
+
 
 #define SCREEN_WIDTH ([UIScreen mainScreen].bounds.size.width)
 #define SCREEN_HEIGHT ([UIScreen mainScreen].bounds.size.height)
 /** 标题栏默认字体 */
 #define MGTitleFont [UIFont systemFontOfSize:15]
+
+
+#define MGColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
+#define MGColorRGBA(r, g, b, a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:a]
+// 获取随机色
+#define MGRandomColor MGColor(arc4random_uniform(256),  arc4random_uniform(256), arc4random_uniform(256)]
 
 
 #endif /* MGZhiHuConst_h */

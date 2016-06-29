@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		CCBE5C941CD1148500E11DCF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CCBE5C931CD1148500E11DCF /* main.m */; };
 		CCBE5C971CD1148500E11DCF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CCBE5C961CD1148500E11DCF /* AppDelegate.m */; };
-		CCBE5C9A1CD1148500E11DCF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCBE5C991CD1148500E11DCF /* ViewController.m */; };
 		CCBE5C9D1CD1148500E11DCF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCBE5C9B1CD1148500E11DCF /* Main.storyboard */; };
 		CCBE5C9F1CD1148500E11DCF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCBE5C9E1CD1148500E11DCF /* Assets.xcassets */; };
 		CCBE5CA21CD1148500E11DCF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCBE5CA01CD1148500E11DCF /* LaunchScreen.storyboard */; };
@@ -31,8 +30,6 @@
 		CCBE5C931CD1148500E11DCF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CCBE5C951CD1148500E11DCF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CCBE5C961CD1148500E11DCF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		CCBE5C981CD1148500E11DCF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		CCBE5C991CD1148500E11DCF /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		CCBE5C9C1CD1148500E11DCF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CCBE5C9E1CD1148500E11DCF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CCBE5CA11CD1148500E11DCF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -127,8 +124,8 @@
 		CCFF8B071D23972200DA17F3 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				CCFF8B2B1D23BDFC00DA17F3 /* Theme-主题 */,
 				CCFF8B0A1D23973400DA17F3 /* Home-首页 */,
-				CCFF8B231D23A6AA00DA17F3 /* Left-侧边 */,
 				CCFF8B091D23972200DA17F3 /* Other-其它 */,
 			);
 			path = Classes;
@@ -142,8 +139,6 @@
 				CCFF8B0B1D23993100DA17F3 /* LxDBAnything.h */,
 				CCFF8B0D1D239A5F00DA17F3 /* MGZhiHuConst.h */,
 				CCFF8B0C1D23994600DA17F3 /* PrefixHeader.pch */,
-				CCBE5C981CD1148500E11DCF /* ViewController.h */,
-				CCBE5C991CD1148500E11DCF /* ViewController.m */,
 			);
 			path = "Other-其它";
 			sourceTree = "<group>";
@@ -187,31 +182,31 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		CCFF8B231D23A6AA00DA17F3 /* Left-侧边 */ = {
+		CCFF8B2B1D23BDFC00DA17F3 /* Theme-主题 */ = {
 			isa = PBXGroup;
 			children = (
-				CCFF8B241D23A6AA00DA17F3 /* Controller */,
-				CCFF8B251D23A6AA00DA17F3 /* Model */,
-				CCFF8B261D23A6AA00DA17F3 /* View */,
+				CCFF8B2C1D23BDFC00DA17F3 /* Controller */,
+				CCFF8B2D1D23BDFC00DA17F3 /* Model */,
+				CCFF8B2E1D23BDFC00DA17F3 /* View */,
 			);
-			path = "Left-侧边";
+			path = "Theme-主题";
 			sourceTree = "<group>";
 		};
-		CCFF8B241D23A6AA00DA17F3 /* Controller */ = {
+		CCFF8B2C1D23BDFC00DA17F3 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		CCFF8B251D23A6AA00DA17F3 /* Model */ = {
+		CCFF8B2D1D23BDFC00DA17F3 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
-		CCFF8B261D23A6AA00DA17F3 /* View */ = {
+		CCFF8B2E1D23BDFC00DA17F3 /* View */ = {
 			isa = PBXGroup;
 			children = (
 			);
@@ -343,7 +338,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CCBE5C9A1CD1148500E11DCF /* ViewController.m in Sources */,
 				CCFF8B1C1D23A5B400DA17F3 /* MGContentCell.m in Sources */,
 				CCFF8B221D23A64500DA17F3 /* MGTopStory.m in Sources */,
 				CCBE5C971CD1148500E11DCF /* AppDelegate.m in Sources */,

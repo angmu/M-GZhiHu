@@ -13,6 +13,9 @@
 
 #import "MGZhiHuConst.h"
 #import "SWRevealViewController.h"
+#import "AFNetworking.h"
+#import "MJExtension.h"
+
 
 
 #endif /* PrefixHeader_pch */

@@ -10,4 +10,12 @@
 
 @implementation MGStory
 
++ (NSDictionary *)mj_replacedKeyFromPropertyName
+{
+    return @{
+             @"storyId":@"id",
+             };
+
+}
+
 @end
