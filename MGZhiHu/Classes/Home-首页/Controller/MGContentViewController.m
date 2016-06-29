@@ -38,9 +38,11 @@
     
     self.view.backgroundColor = [UIColor grayColor];
     self.automaticallyAdjustsScrollViewInsets = NO;
-    self.tableView.contentInset = UIEdgeInsetsMake(120, 0, 0, 0);
     
-//    [self.tableView registerNib:[UITableViewCell ] forCellReuseIdentifier:contentCell];
+    // 保证调用scrollViewDidScroll方法
+    [self.tableView setContentOffset:CGPointMake(0, 1)];
+    LxDBAnyVar(self.tableView.contentOffset.y);
+    
     
     // 集成刷新控件
     [self setupRefresh];
@@ -54,7 +56,6 @@
     [super viewWillAppear:animated];
     
     self.navigationController.navigationBarHidden = NO;
-//    [self.tableView setContentOffset:CGPointMake(0, -60)];
 }
 
 #pragma mark - 初始化
@@ -64,7 +65,7 @@
 - (void)setupNavigationBar
 {
     // 设置导航内容的颜色，title，左右item
-    self.navigationController.navigationBar.barTintColor = MGColor(22, 124, 231);
+    self.navigationController.navigationBar.barTintColor = MGNavBarColor;
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
     [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
     // 隐藏导航栏分割线
@@ -124,7 +125,7 @@
 - (SDCycleScrollView *)scrollImageView
 {
     if (_scrollImageView == nil) {
-        _scrollImageView = [[SDCycleScrollView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, MGScrollImageH+64)];
+        _scrollImageView = [[SDCycleScrollView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, MGScrollImageH)];
         
         // 设置SDCycleScrollView属性
         _scrollImageView.autoScrollTimeInterval = 4;
@@ -169,6 +170,21 @@
     
     // 3.返回cell
     return cell;
+}
+
+#pragma mark - UISCrollViewDelegate
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    CGFloat offsetY = scrollView.contentOffset.y;
+    UIColor *navBarColor = MGNavBarColor;
+    
+    CGFloat alpha = offsetY / (MGScrollImageH - MGNavBarH);
+    if (alpha < 1.0) {
+        
+        [self.navigationController.navigationBar lt_setBackgroundColor:[navBarColor colorWithAlphaComponent:alpha]];
+    }
+    LxDBAnyVar(offsetY);
+    LxDBAnyVar(alpha);
 }
 
 

@@ -21,7 +21,9 @@ static CGFloat const MGTitleMargin = 20;
 static NSString *const ID = @"MGPageViewCell";
 
 /** 循环滚动图片高度 */
-static CGFloat const MGScrollImageH = 154;
+static CGFloat const MGScrollImageH = 220;
+/** 导航栏高度 */
+static CGFloat const MGNavBarH = 64;
 
 
 #define SCREEN_WIDTH ([UIScreen mainScreen].bounds.size.width)
@@ -34,6 +36,8 @@ static CGFloat const MGScrollImageH = 154;
 #define MGColorRGBA(r, g, b, a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:a]
 // 获取随机色
 #define MGRandomColor MGColor(arc4random_uniform(256),  arc4random_uniform(256), arc4random_uniform(256)]
+
+#define MGNavBarColor MGColor(47, 185, 254)
 
 
 #endif /* MGZhiHuConst_h */
