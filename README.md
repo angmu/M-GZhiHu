@@ -2,7 +2,7 @@
 仿写知乎
 
 - [x] 首页图片循环滚动</p>
-![](/Screenshot/snip01.png)
+![](/Screenshot/snip01.gif)
 
 
 - 参考<p>
