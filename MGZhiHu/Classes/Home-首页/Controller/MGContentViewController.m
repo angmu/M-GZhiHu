@@ -77,11 +77,9 @@
     revealVc.rearViewRevealWidth = 210;
     revealVc.bounceBackOnOverdraw = NO; // 拉到边界不弹回
     
-    
     // 左边控制器Item
     UIBarButtonItem *leftItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"Home_Icon"] style:UIBarButtonItemStylePlain target:revealVc action:@selector(revealToggle:)];
     self.navigationItem.leftBarButtonItem = leftItem;
-
 }
 
 #pragma mark - 集成刷新控件
@@ -102,7 +100,6 @@
         // 首页轮播数据
         self.topStories = [MGTopStory mj_objectArrayWithKeyValuesArray:responseObject[@"top_stories"]];
         
-        
         // 刷新表格
         [self.tableView reloadData];
         
@@ -118,26 +115,29 @@
 #pragma mark - 添加循环滚动图片
 - (void)setupScrollImageView
 {
-    self.tableView.tableHeaderView = self.scrollImageView;
+    _scrollImageView = [[SDCycleScrollView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, MGScrollImageH)];
     
+    // 设置SDCycleScrollView属性
+    _scrollImageView.autoScrollTimeInterval = 4;
+    _scrollImageView.delegate = self;
+    
+    _scrollImageView.titleLabelHeight = 120;
+    _scrollImageView.titleLabelTextFont = [UIFont boldSystemFontOfSize:17.0];
+    _scrollImageView.titleLabelBackgroundColor = [UIColor clearColor];
+    _scrollImageView.pageControlStyle = SDCycleScrollViewPageContolStyleClassic;
+    _scrollImageView.dotColor = MGNavBarColor;
+    
+    // 设置SDCycleScrollView数据
+    _scrollImageView.imageURLStringsGroup = [self.topStories valueForKey:@"image"];
+    _scrollImageView.titlesGroup = [self.topStories valueForKey:@"title"];
+    
+    self.tableView.tableHeaderView = _scrollImageView;
 }
 
 - (SDCycleScrollView *)scrollImageView
 {
     if (_scrollImageView == nil) {
-        _scrollImageView = [[SDCycleScrollView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, MGScrollImageH)];
         
-        // 设置SDCycleScrollView属性
-        _scrollImageView.autoScrollTimeInterval = 4;
-        _scrollImageView.delegate = self;
-        
-        _scrollImageView.titleLabelHeight = 120;
-        _scrollImageView.titleLabelTextFont = [UIFont boldSystemFontOfSize:17.0];
-        _scrollImageView.titleLabelBackgroundColor = [UIColor clearColor];
-    
-        // 设置SDCycleScrollView数据
-        _scrollImageView.imageURLStringsGroup = [self.topStories valueForKey:@"image"];
-        _scrollImageView.titlesGroup = [self.topStories valueForKey:@"title"];
         
 //        LxDBAnyVar([self.topStories valueForKey:@"image"]);
         
@@ -183,8 +183,8 @@
         
         [self.navigationController.navigationBar lt_setBackgroundColor:[navBarColor colorWithAlphaComponent:alpha]];
     }
-    LxDBAnyVar(offsetY);
-    LxDBAnyVar(alpha);
+//    LxDBAnyVar(offsetY);
+//    LxDBAnyVar(alpha);
 }
 
 
