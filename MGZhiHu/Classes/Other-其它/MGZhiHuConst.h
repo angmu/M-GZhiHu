@@ -40,4 +40,12 @@ static CGFloat const MGNavBarH = 64;
 #define MGNavBarColor MGColor(47, 185, 254)
 
 
+
+#define LRViewBorderRadius(View, Radius, Width, Color)\
+[View.layer setCornerRadius:(Radius)];\
+[View.layer setMasksToBounds:YES];\
+[View.layer setBorderWidth:(Width)];\
+[View.layer setBorderColor:[Color CGColor]]
+
+
 #endif /* MGZhiHuConst_h */

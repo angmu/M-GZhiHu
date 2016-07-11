@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MGStory.h"
 
 @interface MGContentCell : UITableViewCell
 
+/** cell的数据 */
+@property (nonatomic, strong) MGStory *story;
 @end

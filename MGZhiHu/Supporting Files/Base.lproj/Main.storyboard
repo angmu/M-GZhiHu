@@ -43,7 +43,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zcz-vJ-evv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="602" y="-260"/>
+            <point key="canvasLocation" x="516" y="-504"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="KiA-pd-pXe">
@@ -93,32 +93,47 @@
         <scene sceneID="6bz-oG-eS3">
             <objects>
                 <tableViewController id="x3r-du-3ed" customClass="MGContentViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" id="ibv-eq-Gkh">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="28" sectionFooterHeight="28" id="ibv-eq-Gkh">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="contentCell" rowHeight="100" id="Nzc-Eh-2FF" customClass="MGContentCell">
-                                <rect key="frame" x="0.0" y="92" width="600" height="100"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="contentCell" rowHeight="90" id="Nzc-Eh-2FF" customClass="MGContentCell">
+                                <rect key="frame" x="0.0" y="92" width="600" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Nzc-Eh-2FF" id="jYn-qW-Jlo">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="99"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="89"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Menu_Follow" translatesAutoresizingMaskIntoConstraints="NO" id="G7O-LD-w5y">
-                                            <rect key="frame" x="16" y="15" width="15" height="18"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="88V-av-sos">
+                                            <rect key="frame" x="518" y="10" width="72" height="70"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="72" id="e4N-cT-EQW"/>
+                                            </constraints>
                                         </imageView>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Menu_Follow" translatesAutoresizingMaskIntoConstraints="NO" id="jgb-HQ-Ehh">
-                                            <rect key="frame" x="26" y="25" width="15" height="18"/>
-                                        </imageView>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Menu_Follow" translatesAutoresizingMaskIntoConstraints="NO" id="ofh-hd-wy7">
-                                            <rect key="frame" x="36" y="35" width="15" height="18"/>
-                                        </imageView>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Menu_Follow" translatesAutoresizingMaskIntoConstraints="NO" id="aZk-rB-WsL">
-                                            <rect key="frame" x="46" y="45" width="15" height="18"/>
-                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KRj-oh-fuf">
+                                            <rect key="frame" x="10" y="7" width="498" height="75"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="88V-av-sos" firstAttribute="top" secondItem="jYn-qW-Jlo" secondAttribute="top" constant="10" id="1Kk-9n-tnm"/>
+                                        <constraint firstItem="KRj-oh-fuf" firstAttribute="leading" secondItem="jYn-qW-Jlo" secondAttribute="leading" constant="10" id="4iN-IT-Lxb"/>
+                                        <constraint firstItem="KRj-oh-fuf" firstAttribute="top" secondItem="jYn-qW-Jlo" secondAttribute="top" constant="7" id="CgB-Z6-Mds"/>
+                                        <constraint firstAttribute="trailing" secondItem="88V-av-sos" secondAttribute="trailing" constant="10" id="JeC-59-BsY"/>
+                                        <constraint firstItem="KRj-oh-fuf" firstAttribute="centerY" secondItem="jYn-qW-Jlo" secondAttribute="centerY" id="Vpt-Ez-vtV"/>
+                                        <constraint firstItem="88V-av-sos" firstAttribute="centerY" secondItem="jYn-qW-Jlo" secondAttribute="centerY" id="a3q-Gz-bdf"/>
+                                        <constraint firstItem="88V-av-sos" firstAttribute="leading" secondItem="KRj-oh-fuf" secondAttribute="trailing" constant="10" id="aTk-54-jfA"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <edgeInsets key="layoutMargins" top="8" left="0.0" bottom="8" right="8"/>
+                                <connections>
+                                    <outlet property="contentImageView" destination="88V-av-sos" id="jBi-Sp-ywM"/>
+                                    <outlet property="contentLabel" destination="KRj-oh-fuf" id="2W1-JD-bRp"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -133,7 +148,4 @@
             <point key="canvasLocation" x="1833" y="429"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="Menu_Follow" width="15" height="18"/>
-    </resources>
 </document>

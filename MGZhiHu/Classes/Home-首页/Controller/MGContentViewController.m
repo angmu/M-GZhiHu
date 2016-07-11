@@ -13,20 +13,32 @@
 
 
 #import "MGTopStory.h"
+#import "MGStory.h"
+#import "MGContentCell.h"
 
 
 @interface MGContentViewController () <SDCycleScrollViewDelegate>
 
 /** 滚动图片 */
 @property (nonatomic, strong) SDCycleScrollView *scrollImageView;
-/** 最顶部图片 */
+/** 广告数据 */
 @property (nonatomic, strong) NSArray *topStories;
+
+/** 表格数据(组) */
+@property (nonatomic, strong) NSMutableArray *sectionArray;
+
 
 @end
 
 @implementation MGContentViewController
 #pragma mark - 懒加载
-
+- (NSMutableArray *)sectionArray
+{
+    if (!_sectionArray) {
+        _sectionArray = [[NSMutableArray alloc] init];
+    }
+    return _sectionArray;
+}
 
 
 #pragma mark - 控制器方法
@@ -48,7 +60,7 @@
     [self setupRefresh];
     
     [self loadData];
-    
+//    UIColor *mg_Globel = [UIColor colorWithRed:arc4random_uniform(256)/255.0 green:arc4random_uniform(256)/255.0 blue:arc4random_uniform(256)/255.0 alpha:1.0];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -100,6 +112,10 @@
         // 首页轮播数据
         self.topStories = [MGTopStory mj_objectArrayWithKeyValuesArray:responseObject[@"top_stories"]];
         
+        // 加载第一组数据
+        NSArray *stories = [MGStory mj_objectArrayWithKeyValuesArray:responseObject[@"stories"]];
+        [self.sectionArray addObject:stories];
+        
         // 刷新表格
         [self.tableView reloadData];
         
@@ -134,39 +150,26 @@
     self.tableView.tableHeaderView = _scrollImageView;
 }
 
-- (SDCycleScrollView *)scrollImageView
-{
-    if (_scrollImageView == nil) {
-        
-        
-//        LxDBAnyVar([self.topStories valueForKey:@"image"]);
-        
-    }
-    
-    return _scrollImageView;
-}
-
-
-
-
 
 #pragma mark - UITableViewControllerDataSource
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return self.sectionArray.count;
+}
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 10;
+    return [self.sectionArray[section] count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // 1.创建cell
-    static NSString *ID = @"mainContentCell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
-    if (cell == nil) {
-//        LxDBAnyVar(@"cell为nil");
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:ID];
-    }
+    static NSString *ID = @"contentCell";
+    MGContentCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
     
     // 2.设置cell的数据
+    NSArray *stories = self.sectionArray[indexPath.section];
+    cell.story = stories[indexPath.row];
     
     // 3.返回cell
     return cell;
@@ -183,8 +186,6 @@
         
         [self.navigationController.navigationBar lt_setBackgroundColor:[navBarColor colorWithAlphaComponent:alpha]];
     }
-//    LxDBAnyVar(offsetY);
-//    LxDBAnyVar(alpha);
 }
 
 
