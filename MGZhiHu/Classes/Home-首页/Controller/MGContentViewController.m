@@ -10,11 +10,12 @@
 #import <SDCycleScrollView.h>
 #import <UINavigationBar+Awesome.h>
 #import <SWRevealViewController.h>
-
+#import <MJRefresh.h>
 
 #import "MGTopStory.h"
 #import "MGStory.h"
 #import "MGContentCell.h"
+#import "MGDateTool.h"
 
 
 @interface MGContentViewController () <SDCycleScrollViewDelegate>
@@ -26,6 +27,8 @@
 
 /** 表格数据(组) */
 @property (nonatomic, strong) NSMutableArray *sectionArray;
+/** 过去的某一天 */
+@property (nonatomic, assign) NSInteger pastIndex;
 
 
 @end
@@ -49,25 +52,27 @@
     [self setupNavigationBar];
     
     self.view.backgroundColor = [UIColor grayColor];
-    self.automaticallyAdjustsScrollViewInsets = NO;
+//    self.automaticallyAdjustsScrollViewInsets = NO;
     
     // 保证调用scrollViewDidScroll方法
     [self.tableView setContentOffset:CGPointMake(0, 1)];
     LxDBAnyVar(self.tableView.contentOffset.y);
     
+    [self loadData];
     
     // 集成刷新控件
     [self setupRefresh];
     
-    [self loadData];
-//    UIColor *mg_Globel = [UIColor colorWithRed:arc4random_uniform(256)/255.0 green:arc4random_uniform(256)/255.0 blue:arc4random_uniform(256)/255.0 alpha:1.0];
+
+    LxDBAnyVar(self.tableView.contentInset);
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
     
-    self.navigationController.navigationBarHidden = NO;
+//    self.navigationController.navigationBarHidden = NO;
 }
 
 #pragma mark - 初始化
@@ -97,7 +102,8 @@
 #pragma mark - 集成刷新控件
 - (void)setupRefresh
 {
-    
+    // 上拉刷新
+    self.tableView.footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreData)];
 }
 
 #pragma mark - 加载数据
@@ -120,34 +126,78 @@
         [self.tableView reloadData];
         
         [self setupScrollImageView];
+        
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         
         NSLog(@"-- 加载失败");
     }];
+}
+
+/**
+ *  加载更多数据
+ */
+- (void)loadMoreData
+{
+    // 加载更多数据
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     
+    // 参数处理
+    NSDate *requestDate = [MGDateTool getOldDateWithDays:self.pastIndex];
+    
+    NSString *paramStr = [MGDateTool getDateString:requestDate];
+    LxDBAnyVar(requestDate);
+    LxDBAnyVar(paramStr);
+    
+    NSString *urlStr = [NSString stringWithFormat:@"http://news.at.zhihu.com/api/4/news/before/%@",paramStr];
+    
+    [manager GET:urlStr parameters:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull responseObject) {
+        
+        // 加载的数据
+        NSArray *stories = [MGStory mj_objectArrayWithKeyValuesArray:responseObject[@"stories"]];
+        [self.sectionArray addObject:stories];
+        
+        // 结束刷新
+        [self.tableView.footer endRefreshing];
+        
+        // 刷新表格
+        [self.tableView reloadData];
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+        // 结束刷新
+        [self.tableView.footer endRefreshing];
+    }];
+    
+    _pastIndex++;
+    LxDBAnyVar(_pastIndex);
 }
 
 
 #pragma mark - 添加循环滚动图片
 - (void)setupScrollImageView
 {
-    _scrollImageView = [[SDCycleScrollView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, MGScrollImageH)];
+    SDCycleScrollView *scrollImageView = [[SDCycleScrollView alloc] initWithFrame:CGRectMake(0, - 64, SCREEN_WIDTH, MGScrollImageH)];
+    _scrollImageView = scrollImageView;
     
     // 设置SDCycleScrollView属性
-    _scrollImageView.autoScrollTimeInterval = 4;
-    _scrollImageView.delegate = self;
+    scrollImageView.autoScrollTimeInterval = 4;
+    scrollImageView.delegate = self;
     
-    _scrollImageView.titleLabelHeight = 120;
-    _scrollImageView.titleLabelTextFont = [UIFont boldSystemFontOfSize:17.0];
-    _scrollImageView.titleLabelBackgroundColor = [UIColor clearColor];
-    _scrollImageView.pageControlStyle = SDCycleScrollViewPageContolStyleClassic;
-    _scrollImageView.dotColor = MGNavBarColor;
+    scrollImageView.titleLabelHeight = 120;
+    scrollImageView.titleLabelTextFont = [UIFont boldSystemFontOfSize:17.0];
+    scrollImageView.titleLabelBackgroundColor = [UIColor clearColor];
+    scrollImageView.pageControlStyle = SDCycleScrollViewPageContolStyleClassic;
+    scrollImageView.dotColor = MGNavBarColor;
     
     // 设置SDCycleScrollView数据
-    _scrollImageView.imageURLStringsGroup = [self.topStories valueForKey:@"image"];
-    _scrollImageView.titlesGroup = [self.topStories valueForKey:@"title"];
+    scrollImageView.imageURLStringsGroup = [self.topStories valueForKey:@"image"];
+    scrollImageView.titlesGroup = [self.topStories valueForKey:@"title"];
     
-    self.tableView.tableHeaderView = _scrollImageView;
+    UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, MGScrollImageH - MGNavBarH)];
+    [headerView addSubview:scrollImageView];
+    
+    self.tableView.tableHeaderView = headerView;
+    
 }
 
 
@@ -174,6 +224,34 @@
     // 3.返回cell
     return cell;
 }
+#pragma mark - UITableViewDelegate
+//- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+//{
+////    return self.sectionTitle;
+//}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    NSDate *sectionDate = [MGDateTool getOldDateWithDays:section];
+    NSString *title = [MGDateTool getDateWeek:sectionDate];
+    
+    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 44)];
+    
+    titleLabel.backgroundColor = MGNavBarColor;
+    titleLabel.textColor = [UIColor whiteColor];
+    titleLabel.textAlignment = NSTextAlignmentCenter;
+    titleLabel.text = title;
+    
+    return titleLabel;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return section == 0 ? 0 : 30;
+}
+
+
+
 
 #pragma mark - UISCrollViewDelegate
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
@@ -181,10 +259,14 @@
     CGFloat offsetY = scrollView.contentOffset.y;
     UIColor *navBarColor = MGNavBarColor;
     
-    CGFloat alpha = offsetY / (MGScrollImageH - MGNavBarH);
+//    LxDBAnyVar(offsetY + MGNavBarH);
+    
+    CGFloat alpha = (offsetY+MGNavBarH) / (MGScrollImageH - MGNavBarH);
     if (alpha < 1.0) {
         
         [self.navigationController.navigationBar lt_setBackgroundColor:[navBarColor colorWithAlphaComponent:alpha]];
+    } else {
+        [self.navigationController.navigationBar lt_setBackgroundColor:navBarColor];
     }
 }
 

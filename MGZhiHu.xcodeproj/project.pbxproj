@@ -12,6 +12,7 @@
 		CCBE5C9D1CD1148500E11DCF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCBE5C9B1CD1148500E11DCF /* Main.storyboard */; };
 		CCBE5C9F1CD1148500E11DCF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCBE5C9E1CD1148500E11DCF /* Assets.xcassets */; };
 		CCBE5CA21CD1148500E11DCF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCBE5CA01CD1148500E11DCF /* LaunchScreen.storyboard */; };
+		CCFCFCD01D3388C4006F6FAA /* MGDateTool.m in Sources */ = {isa = PBXBuildFile; fileRef = CCFCFCCF1D3388C4006F6FAA /* MGDateTool.m */; };
 		CCFF8B0F1D239C0000DA17F3 /* Splash_Image@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CCFF8B0E1D239C0000DA17F3 /* Splash_Image@2x.jpg */; };
 		CCFF8B111D239C0500DA17F3 /* Splash_Logo_Plus@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CCFF8B101D239C0500DA17F3 /* Splash_Logo_Plus@2x.png */; };
 		CCFF8B131D239C0B00DA17F3 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CCFF8B121D239C0B00DA17F3 /* Default@2x.png */; };
@@ -34,6 +35,8 @@
 		CCBE5C9E1CD1148500E11DCF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CCBE5CA11CD1148500E11DCF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CCBE5CA31CD1148500E11DCF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CCFCFCCE1D3388C4006F6FAA /* MGDateTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGDateTool.h; sourceTree = "<group>"; };
+		CCFCFCCF1D3388C4006F6FAA /* MGDateTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGDateTool.m; sourceTree = "<group>"; };
 		CCFF8B0B1D23993100DA17F3 /* LxDBAnything.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LxDBAnything.h; sourceTree = "<group>"; };
 		CCFF8B0C1D23994600DA17F3 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		CCFF8B0D1D239A5F00DA17F3 /* MGZhiHuConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGZhiHuConst.h; sourceTree = "<group>"; };
@@ -121,6 +124,15 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		CCFCFCCD1D3388B0006F6FAA /* tools */ = {
+			isa = PBXGroup;
+			children = (
+				CCFCFCCE1D3388C4006F6FAA /* MGDateTool.h */,
+				CCFCFCCF1D3388C4006F6FAA /* MGDateTool.m */,
+			);
+			path = tools;
+			sourceTree = "<group>";
+		};
 		CCFF8B071D23972200DA17F3 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -134,6 +146,7 @@
 		CCFF8B091D23972200DA17F3 /* Other-其它 */ = {
 			isa = PBXGroup;
 			children = (
+				CCFCFCCD1D3388B0006F6FAA /* tools */,
 				CCBE5C951CD1148500E11DCF /* AppDelegate.h */,
 				CCBE5C961CD1148500E11DCF /* AppDelegate.m */,
 				CCFF8B0B1D23993100DA17F3 /* LxDBAnything.h */,
@@ -340,6 +353,7 @@
 			files = (
 				CCFF8B1C1D23A5B400DA17F3 /* MGContentCell.m in Sources */,
 				CCFF8B221D23A64500DA17F3 /* MGTopStory.m in Sources */,
+				CCFCFCD01D3388C4006F6FAA /* MGDateTool.m in Sources */,
 				CCBE5C971CD1148500E11DCF /* AppDelegate.m in Sources */,
 				CCFF8B191D23A55B00DA17F3 /* MGContentViewController.m in Sources */,
 				CCBE5C941CD1148500E11DCF /* main.m in Sources */,
