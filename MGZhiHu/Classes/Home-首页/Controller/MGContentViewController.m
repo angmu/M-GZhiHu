@@ -8,7 +8,6 @@
 
 #import "MGContentViewController.h"
 #import <SDCycleScrollView.h>
-#import <UINavigationBar+Awesome.h>
 #import <SWRevealViewController.h>
 #import <MJRefresh.h>
 
@@ -16,6 +15,7 @@
 #import "MGStory.h"
 #import "MGContentCell.h"
 #import "MGDateTool.h"
+#import "MGDetailViewController.h"
 
 
 @interface MGContentViewController () <SDCycleScrollViewDelegate>
@@ -62,25 +62,25 @@
     
     // 集成刷新控件
     [self setupRefresh];
-    
 
-    LxDBAnyVar(self.tableView.contentInset);
+//    LxDBAnyVar(self.tableView.contentInset);
     
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    
-//    self.navigationController.navigationBarHidden = NO;
-//    [self scrollViewDidScroll:self.tableView];
+    self.tableView.delegate = self;
+    [self scrollViewDidScroll:self.tableView];
+    self.navigationController.navigationBarHidden = NO;
 }
 
-//- (void)viewWillDisappear:(BOOL)animated
-//{
-//    [super viewDidDisappear:animated];
-//    [self.navigationController.navigationBar lt_reset];
-//}
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    self.tableView.delegate = nil;
+    [self.navigationController.navigationBar lt_reset];
+}
 
 
 #pragma mark - 初始化
@@ -90,7 +90,7 @@
 - (void)setupNavigationBar
 {
     // 设置导航内容的颜色，title，左右item
-    self.navigationController.navigationBar.barTintColor = MGNavBarColor;
+//    self.navigationController.navigationBar.barTintColor = MGNavBarColor;
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
     [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
     // 隐藏导航栏分割线
@@ -176,7 +176,7 @@
         [self.tableView.footer endRefreshing];
     }];
     
-    _pastIndex++;
+//    _pastIndex++;
     LxDBAnyVar(_pastIndex);
 }
 
@@ -261,36 +261,44 @@
 #pragma mark 点击cell
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    NSArray *stories = self.sectionArray[indexPath.section];
+    MGStory *story = stories[indexPath.row];
     // 详细界面
-    [self performSegueWithIdentifier:@"mainContentSegue" sender:nil];
+    [self performSegueWithIdentifier:@"mainContentSegue" sender:story];
 }
 
-
 #pragma mark - UISCrollViewDelegate
-//- (void)scrollViewDidScroll:(UIScrollView *)scrollView
-//{
-//    CGFloat offsetY = scrollView.contentOffset.y;
-//    UIColor *navBarColor = MGNavBarColor;
-//    
-////    LxDBAnyVar(offsetY + MGNavBarH);
-//    
-//    CGFloat alpha = (offsetY+MGNavBarH) / (MGScrollImageH - MGNavBarH);
-//    if (alpha < 1.0) {
-//        
-//        [self.navigationController.navigationBar lt_setBackgroundColor:[navBarColor colorWithAlphaComponent:alpha]];
-//    } else {
-//        [self.navigationController.navigationBar lt_setBackgroundColor:navBarColor];
-//    }
-//}
-
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    CGFloat offsetY = scrollView.contentOffset.y;
+    UIColor *navBarColor = MGNavBarColor;
+    
+//    LxDBAnyVar(offsetY);
+//    LxDBAnyVar(offsetY + MGNavBarH);
+    
+    CGFloat alpha = (offsetY+MGNavBarH) / (MGScrollImageH - MGNavBarH);
+    if (alpha < 1.0) {
+        
+        [self.navigationController.navigationBar lt_setBackgroundColor:[navBarColor colorWithAlphaComponent:alpha]];
+    } else {
+        [self.navigationController.navigationBar lt_setBackgroundColor:navBarColor];
+    }
+}
 
 #pragma mark - SDCycleScrollViewDelegate
 - (void)cycleScrollView:(SDCycleScrollView *)cycleScrollView didSelectItemAtIndex:(NSInteger)index
 {
     MGTopStory *topStory = self.topStories[index];
-    NSLog(@"你点击了……%zd",topStory.storyId);
+//    NSLog(@"你点击了……%zd",topStory.storyId);
+    
+    [self performSegueWithIdentifier:@"mainContentSegue" sender:topStory];
 }
 
-
-
+#pragma mark - 跳转之前调用,设置数据
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    MGStory *story = (MGStory *)sender;
+    MGDetailViewController *destinationVc = segue.destinationViewController;
+    destinationVc.storyId = story.storyId;
+}
 @end

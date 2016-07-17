@@ -133,7 +133,6 @@
                                 <connections>
                                     <outlet property="contentImageView" destination="88V-av-sos" id="jBi-Sp-ywM"/>
                                     <outlet property="contentLabel" destination="KRj-oh-fuf" id="2W1-JD-bRp"/>
-                                    <segue destination="wyU-fE-MnF" kind="show" identifier="mainContentSegue" trigger="accessoryAction" id="1WZ-Ei-EGG"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -143,28 +142,46 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="今日新闻" id="VUJ-PY-1lU"/>
+                    <connections>
+                        <segue destination="TXZ-o5-ops" kind="show" identifier="mainContentSegue" id="KiU-U2-yf1"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fw7-lD-jzr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1833" y="429"/>
+            <point key="canvasLocation" x="1876" y="429"/>
         </scene>
         <!--Detail View Controller-->
-        <scene sceneID="JYm-qG-7o9">
+        <scene sceneID="jhh-Jl-X8M">
             <objects>
-                <viewController id="wyU-fE-MnF" customClass="MGDetailViewController" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="TXZ-o5-ops" customClass="MGDetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="HOM-Pb-8pE"/>
-                        <viewControllerLayoutGuide type="bottom" id="mUM-pb-FEy"/>
+                        <viewControllerLayoutGuide type="top" id="30a-m2-Sxr"/>
+                        <viewControllerLayoutGuide type="bottom" id="hFM-ZA-smV"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="MNW-ep-ZnK">
+                    <view key="view" contentMode="scaleToFill" id="VBd-v4-2yf">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.49019607900000001" green="0.55294120309999995" blue="0.58431375029999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mGm-Zh-5ge">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.8392156959" green="0.8627451062" blue="0.88235294819999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="mGm-Zh-5ge" firstAttribute="trailing" secondItem="VBd-v4-2yf" secondAttribute="trailing" id="BbM-S8-Sdo"/>
+                            <constraint firstItem="mGm-Zh-5ge" firstAttribute="leading" secondItem="VBd-v4-2yf" secondAttribute="leading" id="FDP-KX-Wcm"/>
+                            <constraint firstItem="mGm-Zh-5ge" firstAttribute="top" secondItem="VBd-v4-2yf" secondAttribute="top" constant="20" id="cAl-Vz-d3z"/>
+                            <constraint firstItem="mGm-Zh-5ge" firstAttribute="bottom" secondItem="hFM-ZA-smV" secondAttribute="top" id="tnY-XE-ONR"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="webView" destination="mGm-Zh-5ge" id="okP-2p-9T1"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="HZc-LP-F79" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="asM-5j-auG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2552" y="436"/>
+            <point key="canvasLocation" x="2617" y="429"/>
         </scene>
     </scenes>
 </document>

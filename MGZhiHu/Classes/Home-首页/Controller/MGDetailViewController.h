@@ -11,4 +11,7 @@
 
 @interface MGDetailViewController : UIViewController
 
+/** storyId */
+@property (nonatomic, assign) NSInteger storyId;
+
 @end
