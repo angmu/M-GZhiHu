@@ -54,8 +54,8 @@
     self.view.backgroundColor = [UIColor grayColor];
 //    self.automaticallyAdjustsScrollViewInsets = NO;
     
-    // 保证调用scrollViewDidScroll方法
-    [self.tableView setContentOffset:CGPointMake(0, 1)];
+    // 保证调用scrollViewDidScroll方法 --->>在viewWillAppear中做
+//    [self.tableView setContentOffset:CGPointMake(0, 1)];
     LxDBAnyVar(self.tableView.contentOffset.y);
     
     [self loadData];
@@ -73,7 +73,15 @@
     [super viewWillAppear:animated];
     
 //    self.navigationController.navigationBarHidden = NO;
+//    [self scrollViewDidScroll:self.tableView];
 }
+
+//- (void)viewWillDisappear:(BOOL)animated
+//{
+//    [super viewDidDisappear:animated];
+//    [self.navigationController.navigationBar lt_reset];
+//}
+
 
 #pragma mark - 初始化
 /**
@@ -250,25 +258,30 @@
     return section == 0 ? 0 : 30;
 }
 
-
+#pragma mark 点击cell
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    // 详细界面
+    [self performSegueWithIdentifier:@"mainContentSegue" sender:nil];
+}
 
 
 #pragma mark - UISCrollViewDelegate
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView
-{
-    CGFloat offsetY = scrollView.contentOffset.y;
-    UIColor *navBarColor = MGNavBarColor;
-    
-//    LxDBAnyVar(offsetY + MGNavBarH);
-    
-    CGFloat alpha = (offsetY+MGNavBarH) / (MGScrollImageH - MGNavBarH);
-    if (alpha < 1.0) {
-        
-        [self.navigationController.navigationBar lt_setBackgroundColor:[navBarColor colorWithAlphaComponent:alpha]];
-    } else {
-        [self.navigationController.navigationBar lt_setBackgroundColor:navBarColor];
-    }
-}
+//- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+//{
+//    CGFloat offsetY = scrollView.contentOffset.y;
+//    UIColor *navBarColor = MGNavBarColor;
+//    
+////    LxDBAnyVar(offsetY + MGNavBarH);
+//    
+//    CGFloat alpha = (offsetY+MGNavBarH) / (MGScrollImageH - MGNavBarH);
+//    if (alpha < 1.0) {
+//        
+//        [self.navigationController.navigationBar lt_setBackgroundColor:[navBarColor colorWithAlphaComponent:alpha]];
+//    } else {
+//        [self.navigationController.navigationBar lt_setBackgroundColor:navBarColor];
+//    }
+//}
 
 
 #pragma mark - SDCycleScrollViewDelegate

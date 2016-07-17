@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CC093BFA1D3B8B030079CBF2 /* MGDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC093BF91D3B8B030079CBF2 /* MGDetailViewController.m */; };
 		CCBE5C941CD1148500E11DCF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CCBE5C931CD1148500E11DCF /* main.m */; };
 		CCBE5C971CD1148500E11DCF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CCBE5C961CD1148500E11DCF /* AppDelegate.m */; };
 		CCBE5C9D1CD1148500E11DCF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCBE5C9B1CD1148500E11DCF /* Main.storyboard */; };
@@ -27,6 +28,8 @@
 		5A2774E18171330FA1AE360A /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		7BFF88E39D079DB6EB1EAD8A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		83DC106840D871B02631640B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC093BF81D3B8B030079CBF2 /* MGDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGDetailViewController.h; sourceTree = "<group>"; };
+		CC093BF91D3B8B030079CBF2 /* MGDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGDetailViewController.m; sourceTree = "<group>"; };
 		CCBE5C8F1CD1148500E11DCF /* MGZhiHu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MGZhiHu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCBE5C931CD1148500E11DCF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CCBE5C951CD1148500E11DCF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -115,8 +118,8 @@
 				CCBE5C9E1CD1148500E11DCF /* Assets.xcassets */,
 				CCFF8B121D239C0B00DA17F3 /* Default@2x.png */,
 				CCBE5CA31CD1148500E11DCF /* Info.plist */,
-				CCBE5CA01CD1148500E11DCF /* LaunchScreen.storyboard */,
 				CCBE5C9B1CD1148500E11DCF /* Main.storyboard */,
+				CCBE5CA01CD1148500E11DCF /* LaunchScreen.storyboard */,
 				CCFF8B0E1D239C0000DA17F3 /* Splash_Image@2x.jpg */,
 				CCFF8B101D239C0500DA17F3 /* Splash_Logo_Plus@2x.png */,
 				CCBE5C931CD1148500E11DCF /* main.m */,
@@ -191,6 +194,8 @@
 			children = (
 				CCFF8B171D23A55B00DA17F3 /* MGContentViewController.h */,
 				CCFF8B181D23A55B00DA17F3 /* MGContentViewController.m */,
+				CC093BF81D3B8B030079CBF2 /* MGDetailViewController.h */,
+				CC093BF91D3B8B030079CBF2 /* MGDetailViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -352,6 +357,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CCFF8B1C1D23A5B400DA17F3 /* MGContentCell.m in Sources */,
+				CC093BFA1D3B8B030079CBF2 /* MGDetailViewController.m in Sources */,
 				CCFF8B221D23A64500DA17F3 /* MGTopStory.m in Sources */,
 				CCFCFCD01D3388C4006F6FAA /* MGDateTool.m in Sources */,
 				CCBE5C971CD1148500E11DCF /* AppDelegate.m in Sources */,
