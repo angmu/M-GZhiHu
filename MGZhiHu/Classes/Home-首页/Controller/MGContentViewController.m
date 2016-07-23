@@ -56,7 +56,7 @@
     
     // 保证调用scrollViewDidScroll方法 --->>在viewWillAppear中做
 //    [self.tableView setContentOffset:CGPointMake(0, 1)];
-    LxDBAnyVar(self.tableView.contentOffset.y);
+//    LxDBAnyVar(self.tableView.contentOffset.y);
     
     [self loadData];
     
@@ -153,8 +153,8 @@
     NSDate *requestDate = [MGDateTool getOldDateWithDays:self.pastIndex];
     
     NSString *paramStr = [MGDateTool getDateString:requestDate];
-    LxDBAnyVar(requestDate);
-    LxDBAnyVar(paramStr);
+//    LxDBAnyVar(requestDate);
+//    LxDBAnyVar(paramStr);
     
     NSString *urlStr = [NSString stringWithFormat:@"http://news.at.zhihu.com/api/4/news/before/%@",paramStr];
     
@@ -177,7 +177,7 @@
     }];
     
 //    _pastIndex++;
-    LxDBAnyVar(_pastIndex);
+//    LxDBAnyVar(_pastIndex);
 }
 
 
@@ -205,7 +205,6 @@
     [headerView addSubview:scrollImageView];
     
     self.tableView.tableHeaderView = headerView;
-    
 }
 
 

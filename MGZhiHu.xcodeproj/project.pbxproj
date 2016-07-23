@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		CC093BFA1D3B8B030079CBF2 /* MGDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC093BF91D3B8B030079CBF2 /* MGDetailViewController.m */; };
+		CC3866591D3E1D84008DE501 /* MGThemeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC3866581D3E1D84008DE501 /* MGThemeViewController.m */; };
+		CCBDCD6B1D4318FD003D4F2F /* MGToThemeContentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CCBDCD6A1D4318FD003D4F2F /* MGToThemeContentCell.m */; };
+		CCBDCD6E1D431AC2003D4F2F /* MGTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = CCBDCD6D1D431AC2003D4F2F /* MGTheme.m */; };
+		CCBDCD711D431E42003D4F2F /* MGThemeContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCBDCD701D431E42003D4F2F /* MGThemeContentViewController.m */; };
 		CCBE5C941CD1148500E11DCF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CCBE5C931CD1148500E11DCF /* main.m */; };
 		CCBE5C971CD1148500E11DCF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CCBE5C961CD1148500E11DCF /* AppDelegate.m */; };
 		CCBE5C9D1CD1148500E11DCF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCBE5C9B1CD1148500E11DCF /* Main.storyboard */; };
@@ -16,7 +20,6 @@
 		CCFCFCD01D3388C4006F6FAA /* MGDateTool.m in Sources */ = {isa = PBXBuildFile; fileRef = CCFCFCCF1D3388C4006F6FAA /* MGDateTool.m */; };
 		CCFF8B0F1D239C0000DA17F3 /* Splash_Image@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CCFF8B0E1D239C0000DA17F3 /* Splash_Image@2x.jpg */; };
 		CCFF8B111D239C0500DA17F3 /* Splash_Logo_Plus@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CCFF8B101D239C0500DA17F3 /* Splash_Logo_Plus@2x.png */; };
-		CCFF8B131D239C0B00DA17F3 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CCFF8B121D239C0B00DA17F3 /* Default@2x.png */; };
 		CCFF8B191D23A55B00DA17F3 /* MGContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCFF8B181D23A55B00DA17F3 /* MGContentViewController.m */; };
 		CCFF8B1C1D23A5B400DA17F3 /* MGContentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CCFF8B1B1D23A5B400DA17F3 /* MGContentCell.m */; };
 		CCFF8B1F1D23A62400DA17F3 /* MGStory.m in Sources */ = {isa = PBXBuildFile; fileRef = CCFF8B1E1D23A62400DA17F3 /* MGStory.m */; };
@@ -30,6 +33,14 @@
 		83DC106840D871B02631640B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC093BF81D3B8B030079CBF2 /* MGDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGDetailViewController.h; sourceTree = "<group>"; };
 		CC093BF91D3B8B030079CBF2 /* MGDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGDetailViewController.m; sourceTree = "<group>"; };
+		CC3866571D3E1D84008DE501 /* MGThemeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGThemeViewController.h; sourceTree = "<group>"; };
+		CC3866581D3E1D84008DE501 /* MGThemeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGThemeViewController.m; sourceTree = "<group>"; };
+		CCBDCD691D4318FD003D4F2F /* MGToThemeContentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGToThemeContentCell.h; sourceTree = "<group>"; };
+		CCBDCD6A1D4318FD003D4F2F /* MGToThemeContentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGToThemeContentCell.m; sourceTree = "<group>"; };
+		CCBDCD6C1D431AC2003D4F2F /* MGTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGTheme.h; sourceTree = "<group>"; };
+		CCBDCD6D1D431AC2003D4F2F /* MGTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGTheme.m; sourceTree = "<group>"; };
+		CCBDCD6F1D431E42003D4F2F /* MGThemeContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGThemeContentViewController.h; sourceTree = "<group>"; };
+		CCBDCD701D431E42003D4F2F /* MGThemeContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGThemeContentViewController.m; sourceTree = "<group>"; };
 		CCBE5C8F1CD1148500E11DCF /* MGZhiHu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MGZhiHu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCBE5C931CD1148500E11DCF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CCBE5C951CD1148500E11DCF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -45,7 +56,6 @@
 		CCFF8B0D1D239A5F00DA17F3 /* MGZhiHuConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGZhiHuConst.h; sourceTree = "<group>"; };
 		CCFF8B0E1D239C0000DA17F3 /* Splash_Image@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Splash_Image@2x.jpg"; sourceTree = "<group>"; };
 		CCFF8B101D239C0500DA17F3 /* Splash_Logo_Plus@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Splash_Logo_Plus@2x.png"; sourceTree = "<group>"; };
-		CCFF8B121D239C0B00DA17F3 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		CCFF8B171D23A55B00DA17F3 /* MGContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGContentViewController.h; sourceTree = "<group>"; };
 		CCFF8B181D23A55B00DA17F3 /* MGContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGContentViewController.m; sourceTree = "<group>"; };
 		CCFF8B1A1D23A5B400DA17F3 /* MGContentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGContentCell.h; sourceTree = "<group>"; };
@@ -116,7 +126,6 @@
 			isa = PBXGroup;
 			children = (
 				CCBE5C9E1CD1148500E11DCF /* Assets.xcassets */,
-				CCFF8B121D239C0B00DA17F3 /* Default@2x.png */,
 				CCBE5CA31CD1148500E11DCF /* Info.plist */,
 				CCBE5C9B1CD1148500E11DCF /* Main.storyboard */,
 				CCBE5CA01CD1148500E11DCF /* LaunchScreen.storyboard */,
@@ -213,6 +222,10 @@
 		CCFF8B2C1D23BDFC00DA17F3 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				CC3866571D3E1D84008DE501 /* MGThemeViewController.h */,
+				CC3866581D3E1D84008DE501 /* MGThemeViewController.m */,
+				CCBDCD6F1D431E42003D4F2F /* MGThemeContentViewController.h */,
+				CCBDCD701D431E42003D4F2F /* MGThemeContentViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -220,6 +233,8 @@
 		CCFF8B2D1D23BDFC00DA17F3 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				CCBDCD6C1D431AC2003D4F2F /* MGTheme.h */,
+				CCBDCD6D1D431AC2003D4F2F /* MGTheme.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -227,6 +242,8 @@
 		CCFF8B2E1D23BDFC00DA17F3 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CCBDCD691D4318FD003D4F2F /* MGToThemeContentCell.h */,
+				CCBDCD6A1D4318FD003D4F2F /* MGToThemeContentCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -292,7 +309,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CCFF8B131D239C0B00DA17F3 /* Default@2x.png in Resources */,
 				CCBE5CA21CD1148500E11DCF /* LaunchScreen.storyboard in Resources */,
 				CCFF8B0F1D239C0000DA17F3 /* Splash_Image@2x.jpg in Resources */,
 				CCFF8B111D239C0500DA17F3 /* Splash_Logo_Plus@2x.png in Resources */,
@@ -356,13 +372,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCBDCD6B1D4318FD003D4F2F /* MGToThemeContentCell.m in Sources */,
 				CCFF8B1C1D23A5B400DA17F3 /* MGContentCell.m in Sources */,
+				CCBDCD711D431E42003D4F2F /* MGThemeContentViewController.m in Sources */,
 				CC093BFA1D3B8B030079CBF2 /* MGDetailViewController.m in Sources */,
 				CCFF8B221D23A64500DA17F3 /* MGTopStory.m in Sources */,
 				CCFCFCD01D3388C4006F6FAA /* MGDateTool.m in Sources */,
 				CCBE5C971CD1148500E11DCF /* AppDelegate.m in Sources */,
 				CCFF8B191D23A55B00DA17F3 /* MGContentViewController.m in Sources */,
 				CCBE5C941CD1148500E11DCF /* main.m in Sources */,
+				CCBDCD6E1D431AC2003D4F2F /* MGTheme.m in Sources */,
+				CC3866591D3E1D84008DE501 /* MGThemeViewController.m in Sources */,
 				CCFF8B1F1D23A62400DA17F3 /* MGStory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
