@@ -8,16 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		CC093BFA1D3B8B030079CBF2 /* MGDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC093BF91D3B8B030079CBF2 /* MGDetailViewController.m */; };
+		CC17B1001D44780B00F7A4AF /* MGThemeImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CC17B0FF1D44780B00F7A4AF /* MGThemeImageCell.m */; };
+		CC17B1031D44858200F7A4AF /* MGThemeNoImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CC17B1021D44858200F7A4AF /* MGThemeNoImageCell.m */; };
+		CC17B1061D4490C600F7A4AF /* MGThemeEditorCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CC17B1051D4490C600F7A4AF /* MGThemeEditorCell.m */; };
+		CC17B10A1D4494AE00F7A4AF /* MGDateTool.m in Sources */ = {isa = PBXBuildFile; fileRef = CC17B1091D4494AE00F7A4AF /* MGDateTool.m */; };
+		CC17B10E1D4494D200F7A4AF /* UIImage+MGExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = CC17B10D1D4494D200F7A4AF /* UIImage+MGExtension.m */; };
 		CC3866591D3E1D84008DE501 /* MGThemeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC3866581D3E1D84008DE501 /* MGThemeViewController.m */; };
 		CCBDCD6B1D4318FD003D4F2F /* MGToThemeContentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CCBDCD6A1D4318FD003D4F2F /* MGToThemeContentCell.m */; };
 		CCBDCD6E1D431AC2003D4F2F /* MGTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = CCBDCD6D1D431AC2003D4F2F /* MGTheme.m */; };
 		CCBDCD711D431E42003D4F2F /* MGThemeContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCBDCD701D431E42003D4F2F /* MGThemeContentViewController.m */; };
+		CCBDCD741D43EA73003D4F2F /* MGThemeContent.m in Sources */ = {isa = PBXBuildFile; fileRef = CCBDCD731D43EA73003D4F2F /* MGThemeContent.m */; };
 		CCBE5C941CD1148500E11DCF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CCBE5C931CD1148500E11DCF /* main.m */; };
 		CCBE5C971CD1148500E11DCF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CCBE5C961CD1148500E11DCF /* AppDelegate.m */; };
 		CCBE5C9D1CD1148500E11DCF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCBE5C9B1CD1148500E11DCF /* Main.storyboard */; };
 		CCBE5C9F1CD1148500E11DCF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCBE5C9E1CD1148500E11DCF /* Assets.xcassets */; };
 		CCBE5CA21CD1148500E11DCF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCBE5CA01CD1148500E11DCF /* LaunchScreen.storyboard */; };
-		CCFCFCD01D3388C4006F6FAA /* MGDateTool.m in Sources */ = {isa = PBXBuildFile; fileRef = CCFCFCCF1D3388C4006F6FAA /* MGDateTool.m */; };
 		CCFF8B0F1D239C0000DA17F3 /* Splash_Image@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CCFF8B0E1D239C0000DA17F3 /* Splash_Image@2x.jpg */; };
 		CCFF8B111D239C0500DA17F3 /* Splash_Logo_Plus@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CCFF8B101D239C0500DA17F3 /* Splash_Logo_Plus@2x.png */; };
 		CCFF8B191D23A55B00DA17F3 /* MGContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCFF8B181D23A55B00DA17F3 /* MGContentViewController.m */; };
@@ -33,6 +38,16 @@
 		83DC106840D871B02631640B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC093BF81D3B8B030079CBF2 /* MGDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGDetailViewController.h; sourceTree = "<group>"; };
 		CC093BF91D3B8B030079CBF2 /* MGDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGDetailViewController.m; sourceTree = "<group>"; };
+		CC17B0FE1D44780B00F7A4AF /* MGThemeImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGThemeImageCell.h; sourceTree = "<group>"; };
+		CC17B0FF1D44780B00F7A4AF /* MGThemeImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGThemeImageCell.m; sourceTree = "<group>"; };
+		CC17B1011D44858200F7A4AF /* MGThemeNoImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGThemeNoImageCell.h; sourceTree = "<group>"; };
+		CC17B1021D44858200F7A4AF /* MGThemeNoImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGThemeNoImageCell.m; sourceTree = "<group>"; };
+		CC17B1041D4490C600F7A4AF /* MGThemeEditorCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGThemeEditorCell.h; sourceTree = "<group>"; };
+		CC17B1051D4490C600F7A4AF /* MGThemeEditorCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGThemeEditorCell.m; sourceTree = "<group>"; };
+		CC17B1081D4494AE00F7A4AF /* MGDateTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGDateTool.h; sourceTree = "<group>"; };
+		CC17B1091D4494AE00F7A4AF /* MGDateTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGDateTool.m; sourceTree = "<group>"; };
+		CC17B10C1D4494D200F7A4AF /* UIImage+MGExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+MGExtension.h"; sourceTree = "<group>"; };
+		CC17B10D1D4494D200F7A4AF /* UIImage+MGExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+MGExtension.m"; sourceTree = "<group>"; };
 		CC3866571D3E1D84008DE501 /* MGThemeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGThemeViewController.h; sourceTree = "<group>"; };
 		CC3866581D3E1D84008DE501 /* MGThemeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGThemeViewController.m; sourceTree = "<group>"; };
 		CCBDCD691D4318FD003D4F2F /* MGToThemeContentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGToThemeContentCell.h; sourceTree = "<group>"; };
@@ -41,6 +56,8 @@
 		CCBDCD6D1D431AC2003D4F2F /* MGTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGTheme.m; sourceTree = "<group>"; };
 		CCBDCD6F1D431E42003D4F2F /* MGThemeContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGThemeContentViewController.h; sourceTree = "<group>"; };
 		CCBDCD701D431E42003D4F2F /* MGThemeContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGThemeContentViewController.m; sourceTree = "<group>"; };
+		CCBDCD721D43EA73003D4F2F /* MGThemeContent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGThemeContent.h; sourceTree = "<group>"; };
+		CCBDCD731D43EA73003D4F2F /* MGThemeContent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGThemeContent.m; sourceTree = "<group>"; };
 		CCBE5C8F1CD1148500E11DCF /* MGZhiHu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MGZhiHu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCBE5C931CD1148500E11DCF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CCBE5C951CD1148500E11DCF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -49,8 +66,6 @@
 		CCBE5C9E1CD1148500E11DCF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CCBE5CA11CD1148500E11DCF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CCBE5CA31CD1148500E11DCF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CCFCFCCE1D3388C4006F6FAA /* MGDateTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGDateTool.h; sourceTree = "<group>"; };
-		CCFCFCCF1D3388C4006F6FAA /* MGDateTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGDateTool.m; sourceTree = "<group>"; };
 		CCFF8B0B1D23993100DA17F3 /* LxDBAnything.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LxDBAnything.h; sourceTree = "<group>"; };
 		CCFF8B0C1D23994600DA17F3 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		CCFF8B0D1D239A5F00DA17F3 /* MGZhiHuConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGZhiHuConst.h; sourceTree = "<group>"; };
@@ -95,6 +110,24 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CC17B1071D4494AE00F7A4AF /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				CC17B1081D4494AE00F7A4AF /* MGDateTool.h */,
+				CC17B1091D4494AE00F7A4AF /* MGDateTool.m */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		CC17B10B1D4494B200F7A4AF /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				CC17B10C1D4494D200F7A4AF /* UIImage+MGExtension.h */,
+				CC17B10D1D4494D200F7A4AF /* UIImage+MGExtension.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
 		CCBE5C861CD1148500E11DCF = {
 			isa = PBXGroup;
 			children = (
@@ -136,15 +169,6 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		CCFCFCCD1D3388B0006F6FAA /* tools */ = {
-			isa = PBXGroup;
-			children = (
-				CCFCFCCE1D3388C4006F6FAA /* MGDateTool.h */,
-				CCFCFCCF1D3388C4006F6FAA /* MGDateTool.m */,
-			);
-			path = tools;
-			sourceTree = "<group>";
-		};
 		CCFF8B071D23972200DA17F3 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -158,7 +182,8 @@
 		CCFF8B091D23972200DA17F3 /* Other-其它 */ = {
 			isa = PBXGroup;
 			children = (
-				CCFCFCCD1D3388B0006F6FAA /* tools */,
+				CC17B10B1D4494B200F7A4AF /* Category */,
+				CC17B1071D4494AE00F7A4AF /* Tool */,
 				CCBE5C951CD1148500E11DCF /* AppDelegate.h */,
 				CCBE5C961CD1148500E11DCF /* AppDelegate.m */,
 				CCFF8B0B1D23993100DA17F3 /* LxDBAnything.h */,
@@ -235,6 +260,8 @@
 			children = (
 				CCBDCD6C1D431AC2003D4F2F /* MGTheme.h */,
 				CCBDCD6D1D431AC2003D4F2F /* MGTheme.m */,
+				CCBDCD721D43EA73003D4F2F /* MGThemeContent.h */,
+				CCBDCD731D43EA73003D4F2F /* MGThemeContent.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -244,6 +271,12 @@
 			children = (
 				CCBDCD691D4318FD003D4F2F /* MGToThemeContentCell.h */,
 				CCBDCD6A1D4318FD003D4F2F /* MGToThemeContentCell.m */,
+				CC17B0FE1D44780B00F7A4AF /* MGThemeImageCell.h */,
+				CC17B0FF1D44780B00F7A4AF /* MGThemeImageCell.m */,
+				CC17B1011D44858200F7A4AF /* MGThemeNoImageCell.h */,
+				CC17B1021D44858200F7A4AF /* MGThemeNoImageCell.m */,
+				CC17B1041D4490C600F7A4AF /* MGThemeEditorCell.h */,
+				CC17B1051D4490C600F7A4AF /* MGThemeEditorCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -373,16 +406,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				CCBDCD6B1D4318FD003D4F2F /* MGToThemeContentCell.m in Sources */,
+				CC17B10E1D4494D200F7A4AF /* UIImage+MGExtension.m in Sources */,
 				CCFF8B1C1D23A5B400DA17F3 /* MGContentCell.m in Sources */,
 				CCBDCD711D431E42003D4F2F /* MGThemeContentViewController.m in Sources */,
+				CC17B1031D44858200F7A4AF /* MGThemeNoImageCell.m in Sources */,
+				CCBDCD741D43EA73003D4F2F /* MGThemeContent.m in Sources */,
 				CC093BFA1D3B8B030079CBF2 /* MGDetailViewController.m in Sources */,
 				CCFF8B221D23A64500DA17F3 /* MGTopStory.m in Sources */,
-				CCFCFCD01D3388C4006F6FAA /* MGDateTool.m in Sources */,
 				CCBE5C971CD1148500E11DCF /* AppDelegate.m in Sources */,
 				CCFF8B191D23A55B00DA17F3 /* MGContentViewController.m in Sources */,
+				CC17B1001D44780B00F7A4AF /* MGThemeImageCell.m in Sources */,
 				CCBE5C941CD1148500E11DCF /* main.m in Sources */,
+				CC17B1061D4490C600F7A4AF /* MGThemeEditorCell.m in Sources */,
 				CCBDCD6E1D431AC2003D4F2F /* MGTheme.m in Sources */,
 				CC3866591D3E1D84008DE501 /* MGThemeViewController.m in Sources */,
+				CC17B10A1D4494AE00F7A4AF /* MGDateTool.m in Sources */,
 				CCFF8B1F1D23A62400DA17F3 /* MGStory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -9,15 +9,11 @@
 #import <Foundation/Foundation.h>
 
 @interface MGTheme : NSObject
-
-/** 主题名字 */
+//> 主题名字
 @property (nonatomic, copy) NSString *name;
-
-/** 主题内容 */
+/// 主题Id
 @property (nonatomic, assign) NSInteger themeId;
-
-/** 主题描述 */
-@property (nonatomic, copy) NSString *themeDescription;
+@property (nonatomic, copy) NSString *themeDescription; //!< 主题描述
 
 /** 详细内容显示的图片地址 */
 @property (nonatomic, copy) NSString *thumbnail;
