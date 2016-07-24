@@ -99,6 +99,8 @@
     // revel控制器
     SWRevealViewController *revealVc = self.revealViewController;
     [self.view addGestureRecognizer:revealVc.panGestureRecognizer];
+    [self.view addGestureRecognizer:revealVc.tapGestureRecognizer];
+    
     revealVc.rearViewRevealWidth = 210;
     revealVc.bounceBackOnOverdraw = NO; // 拉到边界不弹回
     

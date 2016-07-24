@@ -30,6 +30,8 @@
     
     // 加载数据
     [self loadThemeData];
+    
+    self.tableView.backgroundColor = [UIColor blackColor];
 }
 
 - (void)loadThemeData

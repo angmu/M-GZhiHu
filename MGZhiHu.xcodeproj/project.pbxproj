@@ -13,6 +13,17 @@
 		CC17B1061D4490C600F7A4AF /* MGThemeEditorCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CC17B1051D4490C600F7A4AF /* MGThemeEditorCell.m */; };
 		CC17B10A1D4494AE00F7A4AF /* MGDateTool.m in Sources */ = {isa = PBXBuildFile; fileRef = CC17B1091D4494AE00F7A4AF /* MGDateTool.m */; };
 		CC17B10E1D4494D200F7A4AF /* UIImage+MGExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = CC17B10D1D4494D200F7A4AF /* UIImage+MGExtension.m */; };
+		CC17B1171D44E38E00F7A4AF /* MGSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC17B1161D44E38E00F7A4AF /* MGSettingViewController.m */; };
+		CC17B1431D45255500F7A4AF /* FDGapLayoutGuide.m in Sources */ = {isa = PBXBuildFile; fileRef = CC17B1341D45255500F7A4AF /* FDGapLayoutGuide.m */; };
+		CC17B1441D45255500F7A4AF /* FDLayoutSpacer.m in Sources */ = {isa = PBXBuildFile; fileRef = CC17B1361D45255500F7A4AF /* FDLayoutSpacer.m */; };
+		CC17B1451D45255500F7A4AF /* FDStackView.m in Sources */ = {isa = PBXBuildFile; fileRef = CC17B1381D45255500F7A4AF /* FDStackView.m */; };
+		CC17B1461D45255500F7A4AF /* FDStackViewAlignmentLayoutArrangement.m in Sources */ = {isa = PBXBuildFile; fileRef = CC17B13A1D45255500F7A4AF /* FDStackViewAlignmentLayoutArrangement.m */; };
+		CC17B1471D45255500F7A4AF /* FDStackViewDistributionLayoutArrangement.m in Sources */ = {isa = PBXBuildFile; fileRef = CC17B13C1D45255500F7A4AF /* FDStackViewDistributionLayoutArrangement.m */; };
+		CC17B1481D45255500F7A4AF /* FDStackViewExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = CC17B13E1D45255500F7A4AF /* FDStackViewExtensions.m */; };
+		CC17B1491D45255500F7A4AF /* FDStackViewLayoutArrangement.m in Sources */ = {isa = PBXBuildFile; fileRef = CC17B1401D45255500F7A4AF /* FDStackViewLayoutArrangement.m */; };
+		CC17B14A1D45255500F7A4AF /* FDTransformLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = CC17B1421D45255500F7A4AF /* FDTransformLayer.m */; };
+		CC17B14C1D452C0800F7A4AF /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC17B14B1D452C0800F7A4AF /* CoreFoundation.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		CC17B14F1D45313D00F7A4AF /* MGSettingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CC17B14E1D45313D00F7A4AF /* MGSettingCell.m */; };
 		CC3866591D3E1D84008DE501 /* MGThemeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC3866581D3E1D84008DE501 /* MGThemeViewController.m */; };
 		CCBDCD6B1D4318FD003D4F2F /* MGToThemeContentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CCBDCD6A1D4318FD003D4F2F /* MGToThemeContentCell.m */; };
 		CCBDCD6E1D431AC2003D4F2F /* MGTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = CCBDCD6D1D431AC2003D4F2F /* MGTheme.m */; };
@@ -29,7 +40,7 @@
 		CCFF8B1C1D23A5B400DA17F3 /* MGContentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CCFF8B1B1D23A5B400DA17F3 /* MGContentCell.m */; };
 		CCFF8B1F1D23A62400DA17F3 /* MGStory.m in Sources */ = {isa = PBXBuildFile; fileRef = CCFF8B1E1D23A62400DA17F3 /* MGStory.m */; };
 		CCFF8B221D23A64500DA17F3 /* MGTopStory.m in Sources */ = {isa = PBXBuildFile; fileRef = CCFF8B211D23A64500DA17F3 /* MGTopStory.m */; };
-		F49C0B1EE84C2A4ADCA5569F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 83DC106840D871B02631640B /* libPods.a */; };
+		F49C0B1EE84C2A4ADCA5569F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 83DC106840D871B02631640B /* libPods.a */; settings = {ATTRIBUTES = (Required, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +59,27 @@
 		CC17B1091D4494AE00F7A4AF /* MGDateTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGDateTool.m; sourceTree = "<group>"; };
 		CC17B10C1D4494D200F7A4AF /* UIImage+MGExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+MGExtension.h"; sourceTree = "<group>"; };
 		CC17B10D1D4494D200F7A4AF /* UIImage+MGExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+MGExtension.m"; sourceTree = "<group>"; };
+		CC17B1151D44E38E00F7A4AF /* MGSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGSettingViewController.h; sourceTree = "<group>"; };
+		CC17B1161D44E38E00F7A4AF /* MGSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGSettingViewController.m; sourceTree = "<group>"; };
+		CC17B1331D45255500F7A4AF /* FDGapLayoutGuide.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FDGapLayoutGuide.h; sourceTree = "<group>"; };
+		CC17B1341D45255500F7A4AF /* FDGapLayoutGuide.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FDGapLayoutGuide.m; sourceTree = "<group>"; };
+		CC17B1351D45255500F7A4AF /* FDLayoutSpacer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FDLayoutSpacer.h; sourceTree = "<group>"; };
+		CC17B1361D45255500F7A4AF /* FDLayoutSpacer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FDLayoutSpacer.m; sourceTree = "<group>"; };
+		CC17B1371D45255500F7A4AF /* FDStackView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FDStackView.h; sourceTree = "<group>"; };
+		CC17B1381D45255500F7A4AF /* FDStackView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FDStackView.m; sourceTree = "<group>"; };
+		CC17B1391D45255500F7A4AF /* FDStackViewAlignmentLayoutArrangement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FDStackViewAlignmentLayoutArrangement.h; sourceTree = "<group>"; };
+		CC17B13A1D45255500F7A4AF /* FDStackViewAlignmentLayoutArrangement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FDStackViewAlignmentLayoutArrangement.m; sourceTree = "<group>"; };
+		CC17B13B1D45255500F7A4AF /* FDStackViewDistributionLayoutArrangement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FDStackViewDistributionLayoutArrangement.h; sourceTree = "<group>"; };
+		CC17B13C1D45255500F7A4AF /* FDStackViewDistributionLayoutArrangement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FDStackViewDistributionLayoutArrangement.m; sourceTree = "<group>"; };
+		CC17B13D1D45255500F7A4AF /* FDStackViewExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FDStackViewExtensions.h; sourceTree = "<group>"; };
+		CC17B13E1D45255500F7A4AF /* FDStackViewExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FDStackViewExtensions.m; sourceTree = "<group>"; };
+		CC17B13F1D45255500F7A4AF /* FDStackViewLayoutArrangement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FDStackViewLayoutArrangement.h; sourceTree = "<group>"; };
+		CC17B1401D45255500F7A4AF /* FDStackViewLayoutArrangement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FDStackViewLayoutArrangement.m; sourceTree = "<group>"; };
+		CC17B1411D45255500F7A4AF /* FDTransformLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FDTransformLayer.h; sourceTree = "<group>"; };
+		CC17B1421D45255500F7A4AF /* FDTransformLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FDTransformLayer.m; sourceTree = "<group>"; };
+		CC17B14B1D452C0800F7A4AF /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		CC17B14D1D45313D00F7A4AF /* MGSettingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGSettingCell.h; sourceTree = "<group>"; };
+		CC17B14E1D45313D00F7A4AF /* MGSettingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGSettingCell.m; sourceTree = "<group>"; };
 		CC3866571D3E1D84008DE501 /* MGThemeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGThemeViewController.h; sourceTree = "<group>"; };
 		CC3866581D3E1D84008DE501 /* MGThemeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGThemeViewController.m; sourceTree = "<group>"; };
 		CCBDCD691D4318FD003D4F2F /* MGToThemeContentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGToThemeContentCell.h; sourceTree = "<group>"; };
@@ -86,6 +118,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC17B14C1D452C0800F7A4AF /* CoreFoundation.framework in Frameworks */,
 				F49C0B1EE84C2A4ADCA5569F /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -105,6 +138,7 @@
 		849B7FF762A5D5CAC3ECACF2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CC17B14B1D452C0800F7A4AF /* CoreFoundation.framework */,
 				83DC106840D871B02631640B /* libPods.a */,
 			);
 			name = Frameworks;
@@ -126,6 +160,64 @@
 				CC17B10D1D4494D200F7A4AF /* UIImage+MGExtension.m */,
 			);
 			path = Category;
+			sourceTree = "<group>";
+		};
+		CC17B10F1D44E35D00F7A4AF /* Setting-设置 */ = {
+			isa = PBXGroup;
+			children = (
+				CC17B1101D44E35D00F7A4AF /* Controller */,
+				CC17B1111D44E35D00F7A4AF /* View */,
+			);
+			path = "Setting-设置";
+			sourceTree = "<group>";
+		};
+		CC17B1101D44E35D00F7A4AF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CC17B1151D44E38E00F7A4AF /* MGSettingViewController.h */,
+				CC17B1161D44E38E00F7A4AF /* MGSettingViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CC17B1111D44E35D00F7A4AF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CC17B14D1D45313D00F7A4AF /* MGSettingCell.h */,
+				CC17B14E1D45313D00F7A4AF /* MGSettingCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CC17B1311D45255500F7A4AF /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				CC17B1321D45255500F7A4AF /* FDStackView */,
+			);
+			path = Vendor;
+			sourceTree = "<group>";
+		};
+		CC17B1321D45255500F7A4AF /* FDStackView */ = {
+			isa = PBXGroup;
+			children = (
+				CC17B1331D45255500F7A4AF /* FDGapLayoutGuide.h */,
+				CC17B1341D45255500F7A4AF /* FDGapLayoutGuide.m */,
+				CC17B1351D45255500F7A4AF /* FDLayoutSpacer.h */,
+				CC17B1361D45255500F7A4AF /* FDLayoutSpacer.m */,
+				CC17B1371D45255500F7A4AF /* FDStackView.h */,
+				CC17B1381D45255500F7A4AF /* FDStackView.m */,
+				CC17B1391D45255500F7A4AF /* FDStackViewAlignmentLayoutArrangement.h */,
+				CC17B13A1D45255500F7A4AF /* FDStackViewAlignmentLayoutArrangement.m */,
+				CC17B13B1D45255500F7A4AF /* FDStackViewDistributionLayoutArrangement.h */,
+				CC17B13C1D45255500F7A4AF /* FDStackViewDistributionLayoutArrangement.m */,
+				CC17B13D1D45255500F7A4AF /* FDStackViewExtensions.h */,
+				CC17B13E1D45255500F7A4AF /* FDStackViewExtensions.m */,
+				CC17B13F1D45255500F7A4AF /* FDStackViewLayoutArrangement.h */,
+				CC17B1401D45255500F7A4AF /* FDStackViewLayoutArrangement.m */,
+				CC17B1411D45255500F7A4AF /* FDTransformLayer.h */,
+				CC17B1421D45255500F7A4AF /* FDTransformLayer.m */,
+			);
+			path = FDStackView;
 			sourceTree = "<group>";
 		};
 		CCBE5C861CD1148500E11DCF = {
@@ -174,6 +266,7 @@
 			children = (
 				CCFF8B2B1D23BDFC00DA17F3 /* Theme-主题 */,
 				CCFF8B0A1D23973400DA17F3 /* Home-首页 */,
+				CC17B10F1D44E35D00F7A4AF /* Setting-设置 */,
 				CCFF8B091D23972200DA17F3 /* Other-其它 */,
 			);
 			path = Classes;
@@ -182,6 +275,7 @@
 		CCFF8B091D23972200DA17F3 /* Other-其它 */ = {
 			isa = PBXGroup;
 			children = (
+				CC17B1311D45255500F7A4AF /* Vendor */,
 				CC17B10B1D4494B200F7A4AF /* Category */,
 				CC17B1071D4494AE00F7A4AF /* Tool */,
 				CCBE5C951CD1148500E11DCF /* AppDelegate.h */,
@@ -407,20 +501,30 @@
 			files = (
 				CCBDCD6B1D4318FD003D4F2F /* MGToThemeContentCell.m in Sources */,
 				CC17B10E1D4494D200F7A4AF /* UIImage+MGExtension.m in Sources */,
+				CC17B1471D45255500F7A4AF /* FDStackViewDistributionLayoutArrangement.m in Sources */,
+				CC17B1431D45255500F7A4AF /* FDGapLayoutGuide.m in Sources */,
 				CCFF8B1C1D23A5B400DA17F3 /* MGContentCell.m in Sources */,
+				CC17B1481D45255500F7A4AF /* FDStackViewExtensions.m in Sources */,
+				CC17B14A1D45255500F7A4AF /* FDTransformLayer.m in Sources */,
 				CCBDCD711D431E42003D4F2F /* MGThemeContentViewController.m in Sources */,
 				CC17B1031D44858200F7A4AF /* MGThemeNoImageCell.m in Sources */,
 				CCBDCD741D43EA73003D4F2F /* MGThemeContent.m in Sources */,
 				CC093BFA1D3B8B030079CBF2 /* MGDetailViewController.m in Sources */,
 				CCFF8B221D23A64500DA17F3 /* MGTopStory.m in Sources */,
 				CCBE5C971CD1148500E11DCF /* AppDelegate.m in Sources */,
+				CC17B1461D45255500F7A4AF /* FDStackViewAlignmentLayoutArrangement.m in Sources */,
 				CCFF8B191D23A55B00DA17F3 /* MGContentViewController.m in Sources */,
+				CC17B1491D45255500F7A4AF /* FDStackViewLayoutArrangement.m in Sources */,
 				CC17B1001D44780B00F7A4AF /* MGThemeImageCell.m in Sources */,
 				CCBE5C941CD1148500E11DCF /* main.m in Sources */,
 				CC17B1061D4490C600F7A4AF /* MGThemeEditorCell.m in Sources */,
 				CCBDCD6E1D431AC2003D4F2F /* MGTheme.m in Sources */,
 				CC3866591D3E1D84008DE501 /* MGThemeViewController.m in Sources */,
+				CC17B1171D44E38E00F7A4AF /* MGSettingViewController.m in Sources */,
+				CC17B1441D45255500F7A4AF /* FDLayoutSpacer.m in Sources */,
 				CC17B10A1D4494AE00F7A4AF /* MGDateTool.m in Sources */,
+				CC17B1451D45255500F7A4AF /* FDStackView.m in Sources */,
+				CC17B14F1D45313D00F7A4AF /* MGSettingCell.m in Sources */,
 				CCFF8B1F1D23A62400DA17F3 /* MGStory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -485,7 +589,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -522,7 +626,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -536,7 +640,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PREFIX_HEADER = "MGZhiHu/Classes/Other-其它/PrefixHeader.pch";
 				INFOPLIST_FILE = "MGZhiHu/Supporting Files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mg.MGZhiHu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -550,7 +654,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PREFIX_HEADER = "MGZhiHu/Classes/Other-其它/PrefixHeader.pch";
 				INFOPLIST_FILE = "MGZhiHu/Supporting Files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mg.MGZhiHu;
 				PRODUCT_NAME = "$(TARGET_NAME)";

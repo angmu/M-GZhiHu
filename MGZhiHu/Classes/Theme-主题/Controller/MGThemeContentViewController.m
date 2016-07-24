@@ -59,6 +59,7 @@
     // 添加手势
     SWRevealViewController *revealVc = self.revealViewController;
     [self.view addGestureRecognizer:revealVc.panGestureRecognizer];
+    [self.view addGestureRecognizer:revealVc.tapGestureRecognizer];
     
     // item都是白色的
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
