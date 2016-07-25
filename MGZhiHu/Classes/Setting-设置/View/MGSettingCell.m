@@ -8,6 +8,11 @@
 
 #import "MGSettingCell.h"
 
+@interface MGSettingCell ()
+
+@end
+
+
 @implementation MGSettingCell
 
 - (void)awakeFromNib {

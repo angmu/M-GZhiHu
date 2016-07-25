@@ -9,5 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface MGSettingCell : UITableViewCell
+/** 标题 */
+@property (nonatomic, weak) IBOutlet UILabel *cellTitleLabel;
+/** 开关 */
+@property (nonatomic, weak) IBOutlet UISwitch *cellSwitch;
 
 @end

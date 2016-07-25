@@ -7,15 +7,26 @@
 //
 
 #import "MGSettingViewController.h"
+#import "MGSettingCell.h"
 
 @interface MGSettingViewController ()
-
+{
+    NSArray *_cellTitleArray;
+}
 @end
 
 @implementation MGSettingViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    // 设置数据
+    _cellTitleArray = @[@[@"我的资料"],
+                        @[@"自动离线下载"],
+                        @[@"移动网络不下载图片",@"大字号"],
+                        @[@"消息推送",@"点评分享到微博"],
+                        @[@"去好评",@"去吐槽"],
+                        @[@"清除缓存"] ];
     
     [self setupNavBar];
 }
@@ -46,24 +57,62 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+
+    return _cellTitleArray.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+
+    return [_cellTitleArray[section] count];
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
     
-    // Configure the cell...
     
-    return cell;
+    if (indexPath.section == 0 || indexPath.section == 4 || indexPath.section == 5) {
+        
+        // 1.创建cell
+        static NSString *ID = @"tableViewCell";
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
+        if (cell == nil) {
+            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:ID];
+        }
+        // 2.设置cell的数据
+        cell.textLabel.text = _cellTitleArray[indexPath.section][indexPath.row];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        
+        // 3.返回cell
+        return cell;
+        
+    } else {
+        MGSettingCell *cell = [tableView dequeueReusableCellWithIdentifier:@"settingCell"];
+        
+        // 2.设置cell的数据
+        cell.cellTitleLabel.text = _cellTitleArray[indexPath.section][indexPath.row];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        cell.cellSwitch.on = YES;
+        
+        // 3.返回cell
+        return cell;
+    }
 }
-*/
+
+- (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section
+{
+    return section == 1 ? @"仅 WI-FI 下可用,自动下载最新内容" : @"";
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.section == 0) {
+        
+        [self performSegueWithIdentifier:@"toLogin" sender:nil];
+    }
+}
+
+
 
 /*
 // Override to support conditional editing of the table view.

@@ -215,7 +215,6 @@ NSString * const ID = @"cycleCell";
 }
 
 #pragma mark - actions
-
 - (void)loadImageWithImageURLsGroup:(NSArray *)imageURLsGroup
 {
     for (int i = 0; i < imageURLsGroup.count; i++) {
