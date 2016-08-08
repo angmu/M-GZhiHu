@@ -11,14 +11,14 @@
 
 
 /** 下划线指示器默认高度 */
-static CGFloat const MGUnderLineH = 2;
-/** 标题栏 默认高度 */
-static CGFloat const MGTitleScrollViewH = 40;
-/** 标题默认间距 */
-static CGFloat const MGTitleMargin = 20;
+//static CGFloat const MGUnderLineH = 2;
+///** 标题栏 默认高度 */
+//static CGFloat const MGTitleScrollViewH = 40;
+///** 标题默认间距 */
+//static CGFloat const MGTitleMargin = 20;
 
-/** ID */
-static NSString *const ID = @"MGPageViewCell";
+/** ID -> pageViewID */
+//static NSString *const pageViewID = @"MGPageViewCell";
 
 /** 循环滚动图片高度 */
 static CGFloat const MGScrollImageH = 220;

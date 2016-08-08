@@ -15,10 +15,11 @@
 #import "SWRevealViewController.h"
 #import "AFNetworking.h"
 #import "MJExtension.h"
-#import <UIImageView+WebCache.h>
-#import <UINavigationBar+Awesome.h>
-
+#import "UIImageView+WebCache.h"
+#import "UINavigationBar+Awesome.h"
 
 #import "UIImage+MGExtension.h"
+#import "SDCycleScrollView.h"
+
 
 #endif /* PrefixHeader_pch */

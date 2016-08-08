@@ -80,6 +80,9 @@ typedef enum {
 // 是否显示分页控件
 @property (nonatomic, assign) BOOL showPageControl;
 
+// 是否在只有一张图时隐藏pagecontrol，默认为YES
+@property(nonatomic) BOOL hidesForSinglePage;
+
 // pagecontrol 样式，默认为动画样式
 @property (nonatomic, assign) SDCycleScrollViewPageContolStyle pageControlStyle;
 
@@ -102,9 +105,7 @@ typedef enum {
 
 
 
-// >>>>>>>>>>>>>>>>>>>>>>>>>  清除缓存接口
 
-- (void)clearCache;
 
 + (instancetype)cycleScrollViewWithFrame:(CGRect)frame imagesGroup:(NSArray *)imagesGroup;
 

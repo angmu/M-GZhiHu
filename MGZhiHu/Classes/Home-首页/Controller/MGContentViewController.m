@@ -7,8 +7,7 @@
 //
 
 #import "MGContentViewController.h"
-#import <SDCycleScrollView.h>
-#import <SWRevealViewController.h>
+
 #import <MJRefresh.h>
 
 #import "MGTopStory.h"
@@ -64,7 +63,6 @@
     [self setupRefresh];
 
 //    LxDBAnyVar(self.tableView.contentInset);
-    
 }
 
 - (void)viewWillAppear:(BOOL)animated

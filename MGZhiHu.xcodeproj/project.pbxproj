@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CC049D4C1D4E641500B38756 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC049D4B1D4E641500B38756 /* SWRevealViewController.m */; };
 		CC093BFA1D3B8B030079CBF2 /* MGDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC093BF91D3B8B030079CBF2 /* MGDetailViewController.m */; };
 		CC17B1001D44780B00F7A4AF /* MGThemeImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CC17B0FF1D44780B00F7A4AF /* MGThemeImageCell.m */; };
 		CC17B1031D44858200F7A4AF /* MGThemeNoImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CC17B1021D44858200F7A4AF /* MGThemeNoImageCell.m */; };
@@ -25,6 +26,14 @@
 		CC17B14C1D452C0800F7A4AF /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC17B14B1D452C0800F7A4AF /* CoreFoundation.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		CC17B14F1D45313D00F7A4AF /* MGSettingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CC17B14E1D45313D00F7A4AF /* MGSettingCell.m */; };
 		CC3866591D3E1D84008DE501 /* MGThemeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC3866581D3E1D84008DE501 /* MGThemeViewController.m */; };
+		CCAE683A1D58721600C7EF3F /* TAAbstractDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = CCAE682D1D58721600C7EF3F /* TAAbstractDotView.m */; };
+		CCAE683B1D58721600C7EF3F /* TAAnimatedDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = CCAE682F1D58721600C7EF3F /* TAAnimatedDotView.m */; };
+		CCAE683C1D58721600C7EF3F /* TADotView.m in Sources */ = {isa = PBXBuildFile; fileRef = CCAE68311D58721600C7EF3F /* TADotView.m */; };
+		CCAE683D1D58721600C7EF3F /* TAPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = CCAE68331D58721600C7EF3F /* TAPageControl.m */; };
+		CCAE683E1D58721600C7EF3F /* SDCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CCAE68351D58721600C7EF3F /* SDCollectionViewCell.m */; };
+		CCAE683F1D58721600C7EF3F /* SDCycleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = CCAE68371D58721600C7EF3F /* SDCycleScrollView.m */; };
+		CCAE68401D58721600C7EF3F /* UIView+SDExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = CCAE68391D58721600C7EF3F /* UIView+SDExtension.m */; };
+		CCAE68441D58727200C7EF3F /* UINavigationBar+Awesome.m in Sources */ = {isa = PBXBuildFile; fileRef = CCAE68431D58727200C7EF3F /* UINavigationBar+Awesome.m */; };
 		CCBDCD6B1D4318FD003D4F2F /* MGToThemeContentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CCBDCD6A1D4318FD003D4F2F /* MGToThemeContentCell.m */; };
 		CCBDCD6E1D431AC2003D4F2F /* MGTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = CCBDCD6D1D431AC2003D4F2F /* MGTheme.m */; };
 		CCBDCD711D431E42003D4F2F /* MGThemeContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCBDCD701D431E42003D4F2F /* MGThemeContentViewController.m */; };
@@ -47,6 +56,8 @@
 		5A2774E18171330FA1AE360A /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		7BFF88E39D079DB6EB1EAD8A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		83DC106840D871B02631640B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC049D4A1D4E641500B38756 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		CC049D4B1D4E641500B38756 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		CC093BF81D3B8B030079CBF2 /* MGDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGDetailViewController.h; sourceTree = "<group>"; };
 		CC093BF91D3B8B030079CBF2 /* MGDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGDetailViewController.m; sourceTree = "<group>"; };
 		CC17B0FE1D44780B00F7A4AF /* MGThemeImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGThemeImageCell.h; sourceTree = "<group>"; };
@@ -82,6 +93,22 @@
 		CC17B14E1D45313D00F7A4AF /* MGSettingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGSettingCell.m; sourceTree = "<group>"; };
 		CC3866571D3E1D84008DE501 /* MGThemeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGThemeViewController.h; sourceTree = "<group>"; };
 		CC3866581D3E1D84008DE501 /* MGThemeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGThemeViewController.m; sourceTree = "<group>"; };
+		CCAE682C1D58721600C7EF3F /* TAAbstractDotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAAbstractDotView.h; sourceTree = "<group>"; };
+		CCAE682D1D58721600C7EF3F /* TAAbstractDotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAAbstractDotView.m; sourceTree = "<group>"; };
+		CCAE682E1D58721600C7EF3F /* TAAnimatedDotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAAnimatedDotView.h; sourceTree = "<group>"; };
+		CCAE682F1D58721600C7EF3F /* TAAnimatedDotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAAnimatedDotView.m; sourceTree = "<group>"; };
+		CCAE68301D58721600C7EF3F /* TADotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TADotView.h; sourceTree = "<group>"; };
+		CCAE68311D58721600C7EF3F /* TADotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TADotView.m; sourceTree = "<group>"; };
+		CCAE68321D58721600C7EF3F /* TAPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAPageControl.h; sourceTree = "<group>"; };
+		CCAE68331D58721600C7EF3F /* TAPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAPageControl.m; sourceTree = "<group>"; };
+		CCAE68341D58721600C7EF3F /* SDCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDCollectionViewCell.h; sourceTree = "<group>"; };
+		CCAE68351D58721600C7EF3F /* SDCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDCollectionViewCell.m; sourceTree = "<group>"; };
+		CCAE68361D58721600C7EF3F /* SDCycleScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDCycleScrollView.h; sourceTree = "<group>"; };
+		CCAE68371D58721600C7EF3F /* SDCycleScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDCycleScrollView.m; sourceTree = "<group>"; };
+		CCAE68381D58721600C7EF3F /* UIView+SDExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SDExtension.h"; sourceTree = "<group>"; };
+		CCAE68391D58721600C7EF3F /* UIView+SDExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SDExtension.m"; sourceTree = "<group>"; };
+		CCAE68421D58727200C7EF3F /* UINavigationBar+Awesome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+Awesome.h"; sourceTree = "<group>"; };
+		CCAE68431D58727200C7EF3F /* UINavigationBar+Awesome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+Awesome.m"; sourceTree = "<group>"; };
 		CCBDCD691D4318FD003D4F2F /* MGToThemeContentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGToThemeContentCell.h; sourceTree = "<group>"; };
 		CCBDCD6A1D4318FD003D4F2F /* MGToThemeContentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGToThemeContentCell.m; sourceTree = "<group>"; };
 		CCBDCD6C1D431AC2003D4F2F /* MGTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGTheme.h; sourceTree = "<group>"; };
@@ -144,6 +171,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CC049D491D4E641500B38756 /* SWRevealViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CC049D4A1D4E641500B38756 /* SWRevealViewController.h */,
+				CC049D4B1D4E641500B38756 /* SWRevealViewController.m */,
+			);
+			path = SWRevealViewController;
+			sourceTree = "<group>";
+		};
 		CC17B1071D4494AE00F7A4AF /* Tool */ = {
 			isa = PBXGroup;
 			children = (
@@ -192,6 +228,9 @@
 		CC17B1311D45255500F7A4AF /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				CCAE68411D58727200C7EF3F /* LTNavigationBar */,
+				CCAE682A1D58721600C7EF3F /* SDCycleScrollView */,
+				CC049D491D4E641500B38756 /* SWRevealViewController */,
 				CC17B1321D45255500F7A4AF /* FDStackView */,
 			);
 			path = Vendor;
@@ -218,6 +257,44 @@
 				CC17B1421D45255500F7A4AF /* FDTransformLayer.m */,
 			);
 			path = FDStackView;
+			sourceTree = "<group>";
+		};
+		CCAE682A1D58721600C7EF3F /* SDCycleScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				CCAE682B1D58721600C7EF3F /* PageControl */,
+				CCAE68341D58721600C7EF3F /* SDCollectionViewCell.h */,
+				CCAE68351D58721600C7EF3F /* SDCollectionViewCell.m */,
+				CCAE68361D58721600C7EF3F /* SDCycleScrollView.h */,
+				CCAE68371D58721600C7EF3F /* SDCycleScrollView.m */,
+				CCAE68381D58721600C7EF3F /* UIView+SDExtension.h */,
+				CCAE68391D58721600C7EF3F /* UIView+SDExtension.m */,
+			);
+			path = SDCycleScrollView;
+			sourceTree = "<group>";
+		};
+		CCAE682B1D58721600C7EF3F /* PageControl */ = {
+			isa = PBXGroup;
+			children = (
+				CCAE682C1D58721600C7EF3F /* TAAbstractDotView.h */,
+				CCAE682D1D58721600C7EF3F /* TAAbstractDotView.m */,
+				CCAE682E1D58721600C7EF3F /* TAAnimatedDotView.h */,
+				CCAE682F1D58721600C7EF3F /* TAAnimatedDotView.m */,
+				CCAE68301D58721600C7EF3F /* TADotView.h */,
+				CCAE68311D58721600C7EF3F /* TADotView.m */,
+				CCAE68321D58721600C7EF3F /* TAPageControl.h */,
+				CCAE68331D58721600C7EF3F /* TAPageControl.m */,
+			);
+			path = PageControl;
+			sourceTree = "<group>";
+		};
+		CCAE68411D58727200C7EF3F /* LTNavigationBar */ = {
+			isa = PBXGroup;
+			children = (
+				CCAE68421D58727200C7EF3F /* UINavigationBar+Awesome.h */,
+				CCAE68431D58727200C7EF3F /* UINavigationBar+Awesome.m */,
+			);
+			path = LTNavigationBar;
 			sourceTree = "<group>";
 		};
 		CCBE5C861CD1148500E11DCF = {
@@ -506,7 +583,11 @@
 				CCFF8B1C1D23A5B400DA17F3 /* MGContentCell.m in Sources */,
 				CC17B1481D45255500F7A4AF /* FDStackViewExtensions.m in Sources */,
 				CC17B14A1D45255500F7A4AF /* FDTransformLayer.m in Sources */,
+				CCAE683C1D58721600C7EF3F /* TADotView.m in Sources */,
+				CC049D4C1D4E641500B38756 /* SWRevealViewController.m in Sources */,
+				CCAE683B1D58721600C7EF3F /* TAAnimatedDotView.m in Sources */,
 				CCBDCD711D431E42003D4F2F /* MGThemeContentViewController.m in Sources */,
+				CCAE683E1D58721600C7EF3F /* SDCollectionViewCell.m in Sources */,
 				CC17B1031D44858200F7A4AF /* MGThemeNoImageCell.m in Sources */,
 				CCBDCD741D43EA73003D4F2F /* MGThemeContent.m in Sources */,
 				CC093BFA1D3B8B030079CBF2 /* MGDetailViewController.m in Sources */,
@@ -518,14 +599,19 @@
 				CC17B1001D44780B00F7A4AF /* MGThemeImageCell.m in Sources */,
 				CCBE5C941CD1148500E11DCF /* main.m in Sources */,
 				CC17B1061D4490C600F7A4AF /* MGThemeEditorCell.m in Sources */,
+				CCAE683A1D58721600C7EF3F /* TAAbstractDotView.m in Sources */,
 				CCBDCD6E1D431AC2003D4F2F /* MGTheme.m in Sources */,
 				CC3866591D3E1D84008DE501 /* MGThemeViewController.m in Sources */,
 				CC17B1171D44E38E00F7A4AF /* MGSettingViewController.m in Sources */,
 				CC17B1441D45255500F7A4AF /* FDLayoutSpacer.m in Sources */,
+				CCAE68401D58721600C7EF3F /* UIView+SDExtension.m in Sources */,
 				CC17B10A1D4494AE00F7A4AF /* MGDateTool.m in Sources */,
 				CC17B1451D45255500F7A4AF /* FDStackView.m in Sources */,
+				CCAE68441D58727200C7EF3F /* UINavigationBar+Awesome.m in Sources */,
+				CCAE683D1D58721600C7EF3F /* TAPageControl.m in Sources */,
 				CC17B14F1D45313D00F7A4AF /* MGSettingCell.m in Sources */,
 				CCFF8B1F1D23A62400DA17F3 /* MGStory.m in Sources */,
+				CCAE683F1D58721600C7EF3F /* SDCycleScrollView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

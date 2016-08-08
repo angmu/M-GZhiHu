@@ -41,6 +41,11 @@
     
     [self.navigationController.navigationBar setBackgroundImage:[[UIImage alloc] init] forBarMetrics:UIBarMetricsDefault];
     [self.navigationController.navigationBar setShadowImage:[[UIImage alloc] init]];
+    
+    // 设置导航栏手势返回，无效？？？
+    self.navigationController.interactivePopGestureRecognizer.delegate = nil;
+    self.navigationController.interactivePopGestureRecognizer.delegate = (id)self;
+    
 }
 
 - (void)viewWillDisappear:(BOOL)animated

@@ -63,7 +63,7 @@
                                         <rect key="frame" x="10" y="0.0" width="185" height="42"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uoz-P0-Ha6">
-                                                <rect key="frame" x="0.0" y="10" width="80" height="22"/>
+                                                <rect key="frame" x="0.0" y="6" width="80" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="80" id="QcG-Za-2Ht"/>
                                                 </constraints>
@@ -753,7 +753,7 @@
         <image name="Menu_Icon_Setting" width="20" height="20"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="qmB-z1-qdQ"/>
+        <segue reference="wf8-bw-zfu"/>
         <segue reference="swJ-c2-LQi"/>
     </inferredMetricsTieBreakers>
 </document>

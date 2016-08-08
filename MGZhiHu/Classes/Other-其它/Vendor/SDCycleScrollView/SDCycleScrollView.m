@@ -23,7 +23,8 @@
 #import "SDCollectionViewCell.h"
 #import "UIView+SDExtension.h"
 #import "TAPageControl.h"
-#import "NSData+SDDataCache.h"
+#import "SDWebImageDownloader.h"
+#import "SDImageCache.h"
 
 
 
@@ -74,6 +75,7 @@ NSString * const ID = @"cycleCell";
     _showPageControl = YES;
     _pageControlDotSize = CGSizeMake(10, 10);
     _pageControlStyle = SDCycleScrollViewPageContolStyleAnimated;
+    _hidesForSinglePage = YES;
     
     self.backgroundColor = [UIColor lightGrayColor];
     
@@ -128,6 +130,7 @@ NSString * const ID = @"cycleCell";
 - (void)setPageControlDotSize:(CGSize)pageControlDotSize
 {
     _pageControlDotSize = pageControlDotSize;
+    [self setupPageControl];
     if ([self.pageControl isKindOfClass:[TAPageControl class]]) {
         TAPageControl *pageContol = (TAPageControl *)_pageControl;
         pageContol.dotSize = pageControlDotSize;
@@ -215,6 +218,7 @@ NSString * const ID = @"cycleCell";
 }
 
 #pragma mark - actions
+
 - (void)loadImageWithImageURLsGroup:(NSArray *)imageURLsGroup
 {
     for (int i = 0; i < imageURLsGroup.count; i++) {
@@ -226,46 +230,32 @@ NSString * const ID = @"cycleCell";
 {
     NSString *urlStr = self.imageURLStringsGroup[index];
     NSURL *url = [NSURL URLWithString:urlStr];
-    // 如果有缓存，直接加载缓存
-    NSData *data = [NSData getDataCacheWithIdentifier:urlStr];
-    if (data) {
-        [self.imagesGroup setObject:[UIImage imageWithData:data] atIndexedSubscript:index];
-    } else {
-        
-        // 网络加载图片并缓存图片
-        [NSURLConnection sendAsynchronousRequest:[NSURLRequest requestWithURL:url]
-                                           queue:[[NSOperationQueue alloc] init]
-                               completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError){
-                                   if (!connectionError) {
-                                       UIImage *image = [UIImage imageWithData:data];
-                                       if (!image) return; // 防止错误数据导致崩溃
-                                       [self.imagesGroup setObject:image atIndexedSubscript:index];
-                                       dispatch_async(dispatch_get_main_queue(), ^{
-                                           if (index == 0) {
-                                               [self.mainView reloadData];
-                                           }
-                                       });
-                                       [data saveDataCacheWithIdentifier:url.absoluteString];
-                                   } else { // 加载数据失败
-                                       static int repeat = 0;
-                                       dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                                           if (repeat > 10) return;
-                                           [self loadImageAtIndex:index];
-                                           repeat++;
-                                       });
-                                       
-                                   }
-                               }
-         
-         ];
-    }
     
+    UIImage *image = [[SDImageCache sharedImageCache] imageFromDiskCacheForKey:urlStr];
+    if (image) {
+        [self.imagesGroup setObject:image atIndexedSubscript:index];
+    } else {
+        [[SDWebImageDownloader sharedDownloader] downloadImageWithURL:url options:SDWebImageDownloaderUseNSURLCache progress:nil completed:^(UIImage *image, NSData *data, NSError *error, BOOL finished) {
+            if (image) {
+                if (index < self.imageURLStringsGroup.count && [self.imageURLStringsGroup[index] isEqualToString:urlStr]) { // 修复频繁刷新异步数组越界问题
+                    [self.imagesGroup setObject:image atIndexedSubscript:index];
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        [self.mainView reloadData];
+                    });
+                }
+            }
+        }];
+    }
 }
 
 
 - (void)setupPageControl
 {
     if (_pageControl) [_pageControl removeFromSuperview]; // 重新加载数据时调整
+    
+    if ((self.imagesGroup.count <= 1) && self.hidesForSinglePage) {
+        return;
+    }
     
     switch (self.pageControlStyle) {
         case SDCycleScrollViewPageContolStyleAnimated:
@@ -291,6 +281,8 @@ NSString * const ID = @"cycleCell";
         default:
             break;
     }
+    
+    
 }
 
 
@@ -376,10 +368,6 @@ NSString * const ID = @"cycleCell";
 
 #pragma mark - public actions
 
-- (void)clearCache
-{
-    [NSData clearCache];
-}
 
 #pragma mark - UICollectionViewDataSource
 
@@ -395,9 +383,9 @@ NSString * const ID = @"cycleCell";
     UIImage *image = self.imagesGroup[itemIndex];
     if (image.size.width == 0 && self.placeholderImage) {
         image = self.placeholderImage;
+        [self loadImageAtIndex:itemIndex];
     }
     cell.imageView.image = image;
-    cell.imageView.contentMode = UIViewContentModeScaleAspectFill;
     if (_titlesGroup.count) {
         cell.title = _titlesGroup[itemIndex];
     }

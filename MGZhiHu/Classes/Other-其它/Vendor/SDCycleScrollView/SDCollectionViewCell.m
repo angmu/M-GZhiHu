@@ -68,8 +68,6 @@
 {
     UILabel *titleLabel = [[UILabel alloc] init];
     _titleLabel = titleLabel;
-    _titleLabel.numberOfLines = 0;
-    _titleLabel.lineBreakMode = NSLineBreakByCharWrapping;
     _titleLabel.hidden = YES;
     [self addSubview:titleLabel];
 }
@@ -77,7 +75,7 @@
 - (void)setTitle:(NSString *)title
 {
     _title = [title copy];
-    _titleLabel.text = title;
+    _titleLabel.text = [NSString stringWithFormat:@"   %@", title];
 }
 
 
@@ -87,9 +85,9 @@
     
     _imageView.frame = self.bounds;
     
-    CGFloat titleLabelW = self.sd_width - 40;
+    CGFloat titleLabelW = self.sd_width;
     CGFloat titleLabelH = _titleLabelHeight;
-    CGFloat titleLabelX = 20;
+    CGFloat titleLabelX = 0;
     CGFloat titleLabelY = self.sd_height - titleLabelH;
     _titleLabel.frame = CGRectMake(titleLabelX, titleLabelY, titleLabelW, titleLabelH);
     _titleLabel.hidden = !_titleLabel.text;
